@@ -1,10 +1,11 @@
 mc16me10
+mc16me10
 <!DOCTYPE HTML>
 <html>
 
 <head>
   <title>Ailab Facilities</title>
-  <base href="/ailab/" />
+  <base href="" />
   <link rel="shortcut icon" href="style/icon1.png" />
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
@@ -46,7 +47,7 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
       <div id="content">
         <h1>Welcome to the AILAB</h1>
 	<h2> AILAB </h2>
-	<img src="media/ailab_2013.png" width="510px" height="400px"> 
+	<img src="ailab_2013.png" width="510px" height="400px"> 
         <p>
 	Artificial Intelligence or AI Lab is one of the many labs in the School of Computer and Information Sciences (SCIS)	
 This standards compliant, simple, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
