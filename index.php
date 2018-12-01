@@ -3,7 +3,7 @@
 
 <head>
   <title>Ailab Facilities</title>
-  <base href="/ailab/" />
+  <base href="/print/" />
   <link rel="shortcut icon" href="style/icon1.png" />
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
