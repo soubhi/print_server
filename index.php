@@ -3,7 +3,7 @@
 
 <head>
   <title>Ailab Facilities</title>
-  <base href="/print/" />
+  <base href="/ailab/" />
   <link rel="shortcut icon" href="style/icon1.png" />
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
@@ -22,7 +22,7 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
 	<div id="header">
     <!------------------------------------heading----------------------------------------->
 	<?php
-		$include_path = "/var/www/print";
+		$include_path = dirname(__FILE__);
 		$use_page="TRUE";
 		include("$include_path/components/heading.php");
 	?>
