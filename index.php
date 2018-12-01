@@ -22,7 +22,7 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
 	<div id="header">
     <!------------------------------------heading----------------------------------------->
 	<?php
-		$include_path = "/var/www/html/ailab";
+		$include_path = "/var/www/print";
 		$use_page="TRUE";
 		include("$include_path/components/heading.php");
 	?>
@@ -30,8 +30,6 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
 
    <!------------------------------------navigation-bar----------------------------------------->
 	<?php
-		$include_path = "/var/www/html/ailab";
-		$use_page="TRUE";
 		include("$include_path/components/nav-bar.php");
 	?>
    <!---------------------------------navigation-bar------------------------------------->
@@ -40,8 +38,6 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
    <div id="site_content">
        <!------------------------------------sidebar----------------------------------------->
 	<?php
-		$include_path = "/var/www/html/ailab";
-		$use_page="TRUE";
 		include("$include_path/components/sidebar.php");
 	?>
    	<!---------------------------------sidebar------------------------------------->
@@ -70,8 +66,6 @@ This standards compliant, simple, fixed width website template is released as an
     </div><!-- site_content ends here -->
     <!------------------------------------footer----------------------------------------->
 	<?php
-		$include_path = "/var/www/html/ailab";
-		$use_page="TRUE";
 		include("$include_path/components/footer.php");
 	?>
     <!---------------------------------footer------------------------------------->
