@@ -17,7 +17,7 @@
 <title>Admin</title>
 
 <head>
-	<base href="/ailab/" />
+	<base href="../../" />
 	<link rel="shortcut icon" href="style/icon1.png" />
 	<meta name="description" content="website description" />
 	<meta name="keywords" content="website keywords, website keywords" />

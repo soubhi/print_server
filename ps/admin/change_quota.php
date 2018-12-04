@@ -15,7 +15,7 @@
 <title>Admin</title>
 
 <head>
-	<base href="/ailab/" />
+	<base href="../../" />
 	<link rel="shortcut icon" href="style/icon1.png" />
 	<meta name="description" content="website description" />
 	<meta name="keywords" content="website keywords, website keywords" />
@@ -30,7 +30,7 @@
      <div id="header">
     <!------------------------------------heading----------------------------------------->
 	<?php
-		$include_path = "/var/www/html/ailab";
+		$include_path = "../..";
 		$use_page="TRUE";
 		include("$include_path/components/heading.php");
 	?>
@@ -53,11 +53,11 @@
       <div id="content">
 	<h2> Welcome Admin! </h2>
 	<div class="admin-box"> 
-		<div class="logout" style="float:right"><a href="ps-new/logout.php">logout</a></div> <br>
-		<a href="ps-new/admin.php" class="home-button "style="background-color: grey;">&laquo; Home</a>
-		<a href="ps-new/change_quota.php" class="change-quota" style="background-color: lightblue; color: white;">Change Quota</a>
+		<div class="logout" style="float:right"><a href="ps/logout.php">logout</a></div> <br>
+		<a href="ps/admin/admin.php" class="home-button "style="background-color: grey;">&laquo; Home</a>
+		<a href="ps/admin/change_quota.php" class="change-quota" style="background-color: lightblue; color: white;">Change Quota</a>
 		<!--<div class="change-quota"><a href="ps-new/change_quota.php">Change Quota</a></div> <br>-->
-		<a href="ps-new/history.php" class="history-button" >View History</a>
+		<a href="ps/admin/history.php" class="history-button" >View History</a>
 	</div>
  
 	<!----------------------------------- CHANGE QUOTA CONTENT --------------------------------------->
