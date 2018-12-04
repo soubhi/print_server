@@ -1,5 +1,4 @@
 <?php
-
 	printf("Include begins here");
 	echo "<br>";
 	echo dirname("__FILE__");
@@ -8,5 +7,4 @@
 	echo "<br>";
 	printf("Include ends here");
 	echo "<br>";
-
 ?>
