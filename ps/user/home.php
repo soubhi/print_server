@@ -156,19 +156,16 @@
 
 <?php
 
-/** FOR NEW USER - UPDATING 'users' table**/
+/** FOR NEW USER - UPDATING 'users' table*/
 
 $username = $_SESSION["username"];
-//echo "$username <br>";
 $result_stream = mysqli_query($conn,"SELECT * FROM quota WHERE stream_code = CONCAT(SUBSTRING('$username', 1, 2), SUBSTRING('$username', 5, 2))");
 $row_stream = mysqli_fetch_array($result_stream);
-//echo "$row_stream[0] <br>";
 $quota1 = $row_stream['stream_quota'];
 $stream = $row_stream['stream_name'];
-//echo "$quota1<br>";
-//echo "$stream<br>";
 
 mysqli_query($conn, "insert into `users` (`username`, `stream`, `quota`)  Select '$username', '$stream', '$quota1'  Where not exists(select * from users where `username`='$username')");
+
 
 ?>
 <div class="home-box">
@@ -178,9 +175,6 @@ mysqli_query($conn, "insert into `users` (`username`, `stream`, `quota`)  Select
 	<a href="ps/user/history.php" class="history-button ">View History</a><br />
 
 	<br />
-
-	<!--<button style="display:block;width:120px; height:30px;" onclick="document.getElementById('getFile').click()">Your text here</button>
-	<input type='file' id="getFile" style="display:none">-->
 
 	<form action="" method="POST" enctype="multipart/form-data">
 		<input type="submit" value="Upload" style="display:none" id="submit"/>
@@ -194,11 +188,6 @@ mysqli_query($conn, "insert into `users` (`username`, `stream`, `quota`)  Select
 
 	<br />
 
-	<!--<form name="frm" action="a3 - Copy.php" method="post" enctype="multipart/form-data"> 
-	    <input type="submit" name="submitFile" style="display:none" id="submit">
-	    <input type="file" name="uploadFile" onchange="document.getElementById('submit').click()">
-	</form>-->
-
 	<?php
 	//TRIGGERING THE SUBMIT BUTTON AUTOMATICALLY	
 	if(isset($_POST['submit']))
@@ -206,25 +195,6 @@ mysqli_query($conn, "insert into `users` (`username`, `stream`, `quota`)  Select
 	    uploadFile();
 	}
 	?>
-	<!--<div class = "files-list" style ="display: inline">
-		Uploaded Files :
-		<ul>
-		<?php 
-		$username = $_SESSION["username"];
-		$list = glob("/home/printmaster/uploads/$username*");
-		//print_r($list);
-
-		foreach ($list as $file) : 
-	    		//echo "$file <br>";?>
-			<li><a href="<?php echo $file ?>"><?php echo exec("echo $file | awk -F- '{printf $2}'")?></a></li>
-		<?php 
-		 endforeach 
-		?>
-
-		</ul>
-	 </div> -->
-	
-	
 
 </div>
 
@@ -243,9 +213,9 @@ if (isset($_FILES['image'])) {
 	// CHECKING THE FILE EXTENSION
       $extensions= array("pdf", "txt");
 
-      if (in_array($file_ext,$extensions)=== false) {
+      /*if (in_array($file_ext,$extensions)=== false) {
          $errors[]="extension not allowed, please choose a PDF or TXT file.";
-      }
+      }*/
 
 	// CHECKING FILE SIZE
       if ($file_size > 2097152) {
@@ -255,63 +225,35 @@ if (isset($_FILES['image'])) {
 	// GETTING THE --JOB ID-- FROM THE DATABASE
 	$result_jobid=mysqli_query($conn,"SELECT Job_ID FROM queue ORDER BY Job_ID DESC LIMIT 1");
 	$row_jobid = $result_jobid->fetch_assoc();
-	#echo "Result jobid = $row3['Job_ID']";
-	#echo "<br>";
-	#printf("\nJob id =  %d \n", $row3['Job_ID']);
 	$job_id = $row_jobid['Job_ID'] + 1;
-	#echo "<br> new job id = $job_id <br>";
 
 	// IF NO ERRORS THEN SAVING THE FILE      
       if (empty($errors)==true) {
-		// MOVING THE FILE FROM TEMPORARY LOCATION
-	
+		
+	// MOVING THE FILE FROM TEMPORARY LOCATION
          move_uploaded_file($file_tmp,"/home/printmaster/uploads/"."$job_id-$file_name");
-	 
 	 $file_path = "/home/printmaster/uploads/$job_id-$file_name";
-	 $file_ps = exec("loffice --convert-to pdf --outdir /home/printmaster/uploads/ $file_path");
-	 echo $file_ps;
-	 //rename("$file_ps","/home/printmaster/uploads/"."$file_ps");
-	 //$file_path_ps = "/home/printmaster/uploads/$file_ps";
+	 
+
+	//CONVERTING THE FILE INTO PDF FILE
+	 exec("export HOME=/tmp && loffice --convert-to pdf --outdir /home/printmaster/uploads/ '$file_path'");
+	
+	 $list = glob("/home/printmaster/uploads/$job_id*.pdf");
+	 //print_r($list);
+	 echo "<br>";
+	 foreach ($list as $file) {
+		//echo $file;
+	 	//$file_ps_path = exec("echo '$file' | awk -F> '{printf $1}'");
+	 }
+	
 	//FINDING THE NO.OF PAGES OF THE FILE
-	 $pages = exec("pdftops $file_path  - | grep showpage | wc -l");
+	 $pages = exec("pdftops '$file'  - | grep showpage | wc -l");
 	 echo "Number of pages : $pages <br>";
 	
 	//FETCHING THE USERS TABLE	
 	$username = $_SESSION['username'];
-	/*$result1 = mysqli_query($conn, "SELECT * from users WHERE username = '$username'");
-	$row1 = $result1->fetch_assoc();
 
-	// GETTING --USER ID-- FROM DATABASE
-	$user_id = $row1['id'];
-	#echo "dub user id = $user_id <br>";
-
-	//CHECKING IF THE USER HAS EXCEEDED HIS LIMIT
-	$result2 = mysqli_query($conn, "SELECT SUM(Pages) FROM queue WHERE Status = 'not-printed' AND User_ID = '$user_id'");
-	$row2 = $result2->fetch_assoc();
-	$not_printed = $row2['SUM(Pages)'];
-	echo "not printed :$not_printed <br>";
-	
-	$nop = $row1['nop'];
-	if ($nop < ($pages+$not_printed)) {
-		echo "Your qouta limit has been exceeded";
-		exit;
-	}
-
-	// GETTING THE --JOB ID-- FROM THE DATABASE
-	$result_jobid=mysqli_query($conn,"SELECT Job_ID FROM queue ORDER BY Job_ID DESC LIMIT 1");
-	$row_jobid = $result_jobid->fetch_assoc();
-	#echo "Result jobid = $row3['Job_ID']";
-	#echo "<br>";
-	#printf("\nJob id =  %d \n", $row3['Job_ID']);
-	$job_id = $row_jobid['Job_ID'] + 1;
-	#echo "<br> new job id = $job_id <br>";
-
-
-	$sql1 = "INSERT INTO queue (`Job_ID`, `User_name`, `File_Name`, `File_Path`, `Pages`) VALUES ($job_id, '$user_id', '$file_name', '$file_path', $pages)";
-	$result3 = mysqli_query($conn, $sql1);
-	printf("Final result = %d\n", $result3);*/
-
-	$sql1 = "INSERT INTO queue (`User_name`, `File_Name`, `File_Path`, `Pages`) VALUES ('$username', '$file_name', '$file_path', $pages)";
+	$sql1 = "INSERT INTO queue (`User_name`, `File_Name`, `File_Path`, `Pages`) VALUES ('$username', '$file_name', '$file', $pages)";
 	$result3 = mysqli_query($conn, $sql1);
 	printf("Final result = %d\n", $result3);
 
@@ -319,8 +261,7 @@ if (isset($_FILES['image'])) {
 
 	 #echo exec("lp /home/printmaster/images/$file_name");
          echo "File uploaded successfully! <br>";
-	 #echo exec("lp $file_path");
-	 #mysqli_query($db, "UPDATE queue SET `Status`=\"printed\" WHERE `Job_ID` = $jobid");
+	
 	unset($_FILES['image']);
 	
 	
@@ -332,18 +273,10 @@ if (isset($_FILES['image'])) {
    }
 ?>
 
-
-
-
-
-
-
-
  </div><!-- content ends here -->
     </div><!-- site_content ends here -->
     <!------------------------------------footer----------------------------------------->
 	<?php
-		$use_page="TRUE";
 		include("$include_path/components/footer.php");
 	?>
     <!---------------------------------footer------------------------------------->
