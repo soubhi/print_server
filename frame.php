@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <title>Home</title>
-  <base href="/ailab/" />
+  <title>Ailab Facilities</title>
+  <base href=".">
   <link rel="shortcut icon" href="style/icon1.png" />
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
@@ -12,54 +12,109 @@
 </head>
 
 <style>
+<!- ----------------------- SELECTED TAB STYLE HERE --------------------------->
 ul#menu li.home-selected a, ul#menu li.home-selected a:hover
-{ background: #FFF;
-  color: navy;}
+{
+  background: #FFF;
+  color: navy;
+}
 </style>
 
 <body>
+
+
+
+
+
+
+
+
+
+
+
   <div id="main">
 	<div id="header">
-    <!------------------------------------heading----------------------------------------->
+    	<!------------------------------------heading----------------------------------------->
 	<?php
-		$include_path = "";
+		//$include_path = dirname(__FILE__);
+		$include_path = ".";
 		$use_page="TRUE";
 		include("$include_path/components/heading.php");
 	?>
-   <!---------------------------------end of heading------------------------------------->
+  	<!---------------------------------end of heading------------------------------------->
 
-   <!------------------------------------navigation-bar----------------------------------------->
+  	<!------------------------------------navigation-bar----------------------------------------->
 	<?php
 		include("$include_path/components/nav-bar.php");
 	?>
-   <!---------------------------------navigation-bar------------------------------------->
+   	<!---------------------------------navigation-bar------------------------------------->
 
-	</div> <!-- header ends here --> 
+	</div> 
+	<!-- header ends here --> 
 
-<!--------------------------------------MainPageContent--------------------------------------------->
 
-   <div id="site_content">
-       <!------------------------------------sidebar----------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="site_content">
+  
+   	<!------------------------------------sidebar----------------------------------------->
 	<?php
 		include("$include_path/components/sidebar.php");
 	?>
    	<!---------------------------------sidebar------------------------------------->
+	
+	
+
+<!-- --------------------- MAIN SITE CONTENT GOES HERE -------------------------->
+	<div id="content">
+
+	</div>
+	<!-- content ends here -->
+  </div>
+
+  <!-- site_content ends here -->
 
 
-      <div id="content">
 
-      </div><!-- content ends here -->
 
-    </div><!-- site_content ends here -->
 
-<!--------------------------------------MainPageContent--------------------------------------------->
 
-    <!------------------------------------footer----------------------------------------->
+
+
+
+
+
+
+
+
+
+ 
+   	<!------------------------------------footer----------------------------------------->
 	<?php
 		include("$include_path/components/footer.php");
 	?>
-    <!---------------------------------footer------------------------------------->
+    	<!---------------------------------footer------------------------------------->
 
-  </div><!-- main ends here -->
+
+
+
+
+
+
+
+
+  </div>
+<!-- main ends here -->
+
 </body>
 </html>
