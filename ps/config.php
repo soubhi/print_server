@@ -11,6 +11,19 @@
 	/*************************  VARIABLE ****************************/
 	$password_path = "ypcat passwd";
 
+	if ($conn->connect_error) {
+		echo "Connection Unsuccessful!"."<br />";
+		echo $conn->connect_error;
+		die();
+	} else {
+		echo "Connection Successful!";
+		echo "<br /> '".DB_USERNAME."' @ '".DB_SERVER."'";
+		echo "<br />"."Database : '".DB_DATABASE."'";
+	}
+
+?>
+
+<!-- TRASH
 
 	if ($conn->connect_error) {
 		echo "Connection Unsuccessful!"."<br />";
@@ -21,10 +34,6 @@
 		echo "<br /> '".DB_USERNAME."' @ '".DB_SERVER."'";
 		echo "<br />"."Database : '".DB_DATABASE."'";
 	}
-?>
-
-<!-- TRASH
-
 /*
 	session_start();
 	if ($_SESSION['logged_in'] != TRUE || $SESSION['username'] != 'admin') {
