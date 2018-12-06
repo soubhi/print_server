@@ -10,8 +10,11 @@
 	// SETTING THINGS
 	$error = '';
 	include("config.php");
+<<<<<<< HEAD
 	/*************************  VARIABLE ****************************/
 	$password_path = "password.txt";
+=======
+>>>>>>> a870c9117f750fe0e2cab9bf608beb16ed0dbadc
 
 	// AFTER GETTING USERNAME AND PASSWORD
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {

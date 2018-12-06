@@ -8,6 +8,9 @@
 	// CONNECT TO THE DATABASE
 	$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
+	/*************************  VARIABLE ****************************/
+	$password_path = "/home/printmaster/ypcat_passwd_20181201.txt";
+
 ?>
 
 <!-- TRASH
