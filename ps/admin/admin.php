@@ -23,7 +23,7 @@
 	<meta name="keywords" content="website keywords, website keywords" />
 	<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
-	<link rel="stylesheet" type="text/css" href="ps-new/style.css">
+	<link rel="stylesheet" type="text/css" href="ps/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -58,7 +58,7 @@
 		<div class="logout" style="float:right"><a href="ps/logout.php">logout</a></div> <br>
 		<a href="ps/admin/admin.php" class="home-button "style="">Home</a>
 		<a href="ps/admin/change_quota.php" class="change-quota">Change Quota</a>
-		<!--<div class="change-quota"><a href="ps-new/change_quota.php">Change Quota</a></div> <br>-->
+		<!--<div class="change-quota"><a href="ps/change_quota.php">Change Quota</a></div> <br>-->
 		<a href="ps/admin/history.php" class="history-button" >View History</a>
 
 		Uploads : <br />
