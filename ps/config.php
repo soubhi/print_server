@@ -1,8 +1,8 @@
 <?php
 	// SET CONNECTION DETAILS
-	define('DB_SERVER', '10.5.0.193');
+	define('DB_SERVER', 'localhost');
 	define('DB_USERNAME', 'root');
-	define('DB_PASSWORD', 'password');
+	define('DB_PASSWORD', 'passwd@123');
 	define('DB_DATABASE', 'print_server');
 
 	// CONNECT TO THE DATABASE
@@ -10,7 +10,8 @@
 
 	/*************************  VARIABLE ****************************/
 	$password_path = "ypcat passwd";
-
+	$upload_path = "/var/printmaster/uploads";
+/*
 	if ($conn->connect_error) {
 		echo "Connection Unsuccessful!"."<br />";
 		echo $conn->connect_error;
@@ -20,7 +21,7 @@
 		echo "<br /> '".DB_USERNAME."' @ '".DB_SERVER."'";
 		echo "<br />"."Database : '".DB_DATABASE."'";
 	}
-
+ */
 ?>
 
 <!-- TRASH

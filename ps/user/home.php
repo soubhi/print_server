@@ -231,8 +231,8 @@ if (isset($_FILES['image'])) {
       if (empty($errors)==true) {
 		
 	// MOVING THE FILE FROM TEMPORARY LOCATION
-         move_uploaded_file($file_tmp,"/home/printmaster/uploads/"."$job_id-$file_name");
-	 $file_path = "/home/printmaster/uploads/$job_id-$file_name";
+         move_uploaded_file($file_tmp,"$upload_path"."$job_id-$file_name");
+	 $file_path = "$/home/printmaster/uploads/$job_id-$file_name";
 	 
 
 	//CONVERTING THE FILE INTO PDF FILE

@@ -6,7 +6,7 @@
 		header("location: login.php");
 	}
 
-	include("config.php");
+	include("../config.php");
 	
 ?>
 
@@ -64,7 +64,7 @@
 
 	<script>
 		function newLocation() { 
-			window.location="ps/change_quota.php";
+			window.location="ps/admin/change_quota.php";
 		}
 		//setTimeout(newLocation, 1500)
 	</script>
@@ -86,7 +86,7 @@
 	<br> <br> <br>	
 	<div class="row">
 		<div class="column"> 
-			<form action="ps/change_quota.php" method="post">	
+			<form action="ps/admin/change_quota.php" method="post">	
 			Select Stream : 
 			<select name="stream">
 				<option value="mcme">Int. M Tech</option> 
@@ -96,9 +96,9 @@
 			<input type="submit" value="Submit">	
 			</form>
 		</div>
-
+<!--
 		<div class="column">  
-			<form action="ps/change_quota.php" method="post">	
+			<form action="ps/admin/change_quota.php" method="post">	
 			Select Stream : 
 			<select name="stream">
 				<option value="mcme">Int. M Tech</option> 
@@ -108,6 +108,7 @@
 			<input type="submit" value="Submit">	
 			</form>
 		</div>
+-->
 	</div>
 
 	<?php
