@@ -90,11 +90,38 @@
 
 	</div> <!-- header ends here --> 
    <div id="site_content">
+
+
        <!------------------------------------sidebar----------------------------------------->
-	<?php
-		include("$include_path/components/sidebar.php");
-	?>
+
+	<div class="sidebar">
+	  <h1>How to Use</h1>
+	  <h4>Steps</h4>
+	  <p>First login (with NIS). <br>
+		Then you can select the files to upload.<br />
+		Once the upload is done go to print server and take the print-out there.<br>
+		<a href="#">Read more</a>
+	  </p>
+	<!--
+	  <h1>Useful Links</h1>
+	  <ul>
+		<li><a href="#">link 1</a></li>
+		<li><a href="#">link 2</a></li>
+		<li><a href="#">link 3</a></li>
+		<li><a href="#">link 4</a></li>
+	  </ul>
+	  <h1>Search</h1>
+	  <form method="post" action="#" id="search_form">
+		<p>
+		<input class="search" type="text" name="search_field" value="Enter keywords....." />
+		<input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+		</p>
+	  </form>
+	-->
+	</div>
+
    	<!---------------------------------sidebar------------------------------------->
+
 
       <div id="content">
 		<h2> Login Here </h2>

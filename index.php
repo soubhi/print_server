@@ -68,7 +68,6 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
   
    	<!------------------------------------sidebar----------------------------------------->
 	<?php
-		include("$include_path/components/sidebar.php");
 	?>
    	<!---------------------------------sidebar------------------------------------->
 	

@@ -36,12 +36,11 @@ ul#menu li.contactUs-selected a, ul#menu li.contactUs-selected a:hover
 
 	</div> <!-- header ends here --> 
 
-<!--------------------------------------MainPageContent--------------------------------------------->
+<!-------------------------------------MainPageContent--------------------------------------------->
 
    <div id="site_content">
        <!------------------------------------sidebar----------------------------------------->
 	<?php
-		include("$include_path/components/sidebar.php");
 	?>
    	<!---------------------------------sidebar------------------------------------->
 
@@ -52,7 +51,7 @@ ul#menu li.contactUs-selected a, ul#menu li.contactUs-selected a:hover
 
     </div><!-- site_content ends here -->
 
-<!--------------------------------------MainPageContent--------------------------------------------->
+<!-------------------------------------MainPageContent--------------------------------------------->
 
     <!------------------------------------footer----------------------------------------->
 	<?php

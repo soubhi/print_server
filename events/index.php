@@ -41,7 +41,6 @@ ul#menu li.events-selected a, ul#menu li.events-selected a:hover
    <div id="site_content">
        <!------------------------------------sidebar----------------------------------------->
 	<?php
-		include("$include_path/components/sidebar.php");
 	?>
    	<!---------------------------------sidebar------------------------------------->
 
