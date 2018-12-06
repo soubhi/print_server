@@ -66,7 +66,7 @@
 	<meta name="keywords" content="website keywords, website keywords" />
 	<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
-	<link rel="stylesheet" type="text/css" href="ps-new/style.css">
+	<link rel="stylesheet" type="text/css" href="ps/style.css">
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 
 </head>
