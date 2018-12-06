@@ -12,6 +12,7 @@
 </head>
 
 <style>
+<!- ----------------------- SELECTED TAB STYLE HERE --------------------------->
 ul#menu li.home-selected a, ul#menu li.home-selected a:hover
 {
   background: #FFF;
@@ -74,13 +75,9 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
 	
 	
 
+<!-- --------------------- MAIN SITE CONTENT GOES HERE -------------------------->
 	<div id="content">
-          <h1>Welcome to the AILAB</h1>
-          <p>Artificial Intelligence or AI Lab is one of the many labs in the School of Computer and Information Sciences (SCIS).</p>
-	  <h2> AILAB </h2>
-	  <img src="media/ailab_2013.png" width="510px" height="400px"> 
-	  <h2> An image of AI Lab in late 90s. </h2>
-	  <img src="media/ailab_1990s.jpg" width="80%"> 
+
 	</div>
 	<!-- content ends here -->
   </div>
