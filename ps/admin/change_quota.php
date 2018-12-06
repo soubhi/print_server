@@ -21,7 +21,7 @@
 	<meta name="keywords" content="website keywords, website keywords" />
 	<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
-	<link rel="stylesheet" type="text/css" href="ps-new/style.css">
+	<link rel="stylesheet" type="text/css" href="ps/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -56,7 +56,7 @@
 		<div class="logout" style="float:right"><a href="ps/logout.php">logout</a></div> <br>
 		<a href="ps/admin/admin.php" class="home-button "style="background-color: grey;">&laquo; Home</a>
 		<a href="ps/admin/change_quota.php" class="change-quota" style="background-color: lightblue; color: white;">Change Quota</a>
-		<!--<div class="change-quota"><a href="ps-new/change_quota.php">Change Quota</a></div> <br>-->
+		<!--<div class="change-quota"><a href="ps/change_quota.php">Change Quota</a></div> <br>-->
 		<a href="ps/admin/history.php" class="history-button" >View History</a>
 	</div>
  
@@ -64,7 +64,7 @@
 
 	<script>
 		function newLocation() { 
-			window.location="ps-new/change_quota.php";
+			window.location="ps/change_quota.php";
 		}
 		//setTimeout(newLocation, 1500)
 	</script>
@@ -86,7 +86,7 @@
 	<br> <br> <br>	
 	<div class="row">
 		<div class="column"> 
-			<form action="ps-new/change_quota.php" method="post">	
+			<form action="ps/change_quota.php" method="post">	
 			Select Stream : 
 			<select name="stream">
 				<option value="mcme">Int. M Tech</option> 
@@ -98,7 +98,7 @@
 		</div>
 
 		<div class="column">  
-			<form action="ps-new/change_quota.php" method="post">	
+			<form action="ps/change_quota.php" method="post">	
 			Select Stream : 
 			<select name="stream">
 				<option value="mcme">Int. M Tech</option> 

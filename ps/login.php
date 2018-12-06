@@ -10,11 +10,7 @@
 	// SETTING THINGS
 	$error = '';
 	include("config.php");
-<<<<<<< HEAD
 	/*************************  VARIABLE ****************************/
-	$password_path = "password.txt";
-=======
->>>>>>> a870c9117f750fe0e2cab9bf608beb16ed0dbadc
 
 	// AFTER GETTING USERNAME AND PASSWORD
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -37,7 +33,7 @@
 		// FOR USER				
 		} else {
 
-			$encrypted_pass = exec("cat $password_path | grep $username | awk -F: '{printf $2}'");
+			$encrypted_pass = exec("$password_path | grep $username | awk -F: '{printf $2}'");
 			$key = $inp_pass;
 			$salt = $encrypted_pass;
 			$inp_encrypted_pass = crypt($key, $salt);

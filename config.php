@@ -9,7 +9,7 @@
 	$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 	/*************************  VARIABLE ****************************/
-	$password_path = "ypcat passwd";
+	$password_path = "password.txt";
 
 
 	if ($conn->connect_error) {
