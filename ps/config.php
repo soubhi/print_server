@@ -1,6 +1,6 @@
 <?php
 	// SET CONNECTION DETAILS
-	define('DB_SERVER', 'localhost');
+	define('DB_SERVER', '10.5.0.193');
 	define('DB_USERNAME', 'root');
 	define('DB_PASSWORD', 'root123');
 	define('DB_DATABASE', 'print_server');

@@ -11,7 +11,7 @@
 	$error = '';
 	include("config.php");
 	/*************************  VARIABLE ****************************/
-	$password_path = "/home/printmaster/ypcat_passwd_20181201.txt";
+	$password_path = "password.txt";
 
 	// AFTER GETTING USERNAME AND PASSWORD
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
