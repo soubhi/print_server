@@ -74,47 +74,7 @@
 			header("location: change_quota.php");
 		}
 	}
-			}
-		}
-		if (isset($_POST['stopPrint'])) {
-			$result = mysqli_query($conn, "UPDATE utility SET value='FALSE' WHERE name = 'printing'");
-			if ($result) {
-				echo "|||||||||| Updation Successful |||||||||||||||||";
-				echo "<script> setTimeout(newLocation, 1000); </script>";			
-			}
-			else {
-				echo "Updation failed!";
-			}
-			unset($result);
-			header("location: change_quota.php");
-		}
-		if (isset($_POST['resumePrint'])) {
-			$result = mysqli_query($conn, "UPDATE utility SET value='TRUE' WHERE name = 'printing'");
-			if ($result) {
-				echo "|||||||||| Updation Successful |||||||||||||||||";
-				echo "<script> setTimeout(newLocation, 1000); </script>";			
-			}
-			else {
-				echo "Updation failed!";
-			}
-			unset($result);
-			header("location: change_quota.php");
-		}
-		if (isset($_POST['renewalTimeUpdate'])) {
-			$time = $_POST['time'];
-			$result = mysqli_query($conn, "UPDATE utility SET value='$time' WHERE name = 'quota-renewal-time'");
-			if ($result) {
-				echo "|||||||||| Updation Successful |||||||||||||||||";
-				echo "<script> setTimeout(newLocation, 1000); </script>";			
-			}
-			else {
-				echo "Updation failed!";
-			}
-			unset($result);
-			header("location: change_quota.php");
-		}
-	}
->>>>>>> 2cfbc966f2f3eb107ba5e423f23766c79aafe557
+		
 ?>
 
 <html>
@@ -179,7 +139,6 @@
  
 	<!----------------------------------- CHANGE QUOTA CONTENT --------------------------------------->
 
-<<<<<<< HEAD
 	<script>
 		function newLocation() { 
 			window.location="ps/admin/change_quota.php";
@@ -201,8 +160,6 @@
 		}
 	</style>
 
-=======
->>>>>>> 2cfbc966f2f3eb107ba5e423f23766c79aafe557
 	<br> <br> <br>	
 	<div class="row">
 		<div class="column">
@@ -237,12 +194,7 @@
 	<br><br>
 	<div class="row">
 		<div class="column"> 
-<<<<<<< HEAD
 			<form action="ps/admin/change_quota.php" method="post">	
-=======
-			<span style="font-size:25px; color:maroon;"> Quota: </span> <br><br><br>
-			<form action="" method="post">	
->>>>>>> 2cfbc966f2f3eb107ba5e423f23766c79aafe557
 			Select Stream : 
 			<script>
 				function changeQuota(name) {
@@ -299,15 +251,8 @@
 			<input type="submit" value="Submit" name="quotaUpdate">	
 			</form>
 		</div>
-<<<<<<< HEAD
-<!--
 		<div class="column">  
 			<form action="ps/admin/change_quota.php" method="post">	
-=======
-		<div class="column"> 
-			<span style="font-size:25px; color:maroon;"> Regular Expression: </span> <br><br><br>	
-			<form action="" method="post">	
->>>>>>> 2cfbc966f2f3eb107ba5e423f23766c79aafe557
 			Select Stream : 
 			<script>
 				function changeRegExp(name) {
@@ -362,7 +307,6 @@
 			<input type="submit" value="Submit" name="regExpUpdate">	
 			</form>
 		</div>
--->
 	</div>
 
 </div><!-- content ends here -->
