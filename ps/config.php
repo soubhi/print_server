@@ -2,13 +2,24 @@
 
 	// SET CONNECTION DETAILS
  
-	if (mysqli_errno($conn)) {
-		printf("connect failed: %s\n", mysqli_error());
-		exit();
-	}
-	else {
+	define('DB_SERVER', 'localhost');
+	define('DB_USERNAME', 'root');
+	define('DB_PASSWORD', 'passwd@123');
+	define('DB_DATABASE', 'print_server');
+
+	// CONNECT TO THE DATABASE
+	$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+	// CONNECTION ERROR
+	if ($conn->connect_error) {
+		echo "Connection Unsuccessful!"."<br />";
+		echo $conn->connect_error;
+		die();
+	} else {
 		echo "";
-		//printf("Host information: %s\n", mysqli_get_host_info($conn));
+		//echo "Connection Successful!";
+		//echo "<br /> '".DB_USERNAME."' @ '".DB_SERVER."'";
+		//echo "<br />"."Database : '".DB_DATABASE."'";
 	}
 
 	/*************************  VARIABLES ****************************/
