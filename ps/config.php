@@ -1,7 +1,7 @@
 <?php
 
 	// SET CONNECTION DETAILS
-	$conn = mysqli_connect("localhost", "root", "root123");
+	$conn = mysqli_connect("localhost", "root", "passwd@123");
 	mysqli_select_db($conn, "print_server");
  
 	if (mysqli_errno($conn)) {
