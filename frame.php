@@ -37,7 +37,7 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
     	<!------------------------------------heading----------------------------------------->
 	<?php
 		//$include_path = dirname(__FILE__);
-		$include_path = ".";
+		$include_path = "./";
 		$use_page="TRUE";
 		include("$include_path/components/heading.php");
 	?>

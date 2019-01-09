@@ -28,12 +28,6 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 	<link rel="stylesheet" type="text/css" href="ps/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-	th:nth-child(2), td:nth-child(2) {
-		width:40%;
-	}
-	
-	</style>
 </head>
 
 <body>
@@ -55,15 +49,20 @@
 
 	</div> <!-- header ends here --> 
    <div id="site_content">
-      
+       <!------------------------------------sidebar----------------------------------------->
+	<?php
+		include("$include_path/components/sidebar.php");
+	?>
+   	<!---------------------------------sidebar------------------------------------->
+
+      <div id="content">
 	<h2> Welcome Admin! </h2>
 		<div class="logout" style="float:right"><a href="ps/logout.php">logout</a></div> <br>
-		<a href="ps/admin/admin.php" class="home-button "style="background-color: grey;">&laquo; Home</a>
-		<a href="ps/admin/change_quota.php" class="nav-btn" >Change Quota</a>
-		<a href="ps/admin/history.php" class="nav-btn" style="background-color: lightblue; color: white;">View History</a>
-		<a href="ps/admin/stats.php" class="nav-btn">Statistics</a>
+		<a href="ps/admin/admin.php" class="home-button "style="">&laquo; Home</a>
+		<a href="ps/admin/change_quota.php" class="change-quota">Change Quota</a>
+		<!--<div class="change-quota"><a href="ps/change_quota.php">Change Quota</a></div> <br>-->
+		<a href="ps/admin/history.php" class="history-button" >View History</a>
 
-		<br><br>
 		History:
 		<table>
 		<thead>
@@ -96,7 +95,7 @@
 		</table>
 
 	</div>
-
+</div><!-- content ends here -->
     </div><!-- site_content ends here -->
     <!------------------------------------footer----------------------------------------->
 	<?php

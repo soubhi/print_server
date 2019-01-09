@@ -24,7 +24,6 @@
 	$include_path = "../..";
 	$use_page="TRUE";
 
-
 	// RENEWING QUOTA
 	quotaRenewal($conn);
 
@@ -38,138 +37,6 @@
 
 
 /************************ METHODS ***************************/
-function pagerange($reg4, $s, $n) {
-	if (!preg_match($reg4, $s)) {
-		return false;
-	}
-	//$n = 17;
-	$len = strlen($s);
-	$st = 0;	
-	$pc = 0;
-	$pages = array();
-
-while (strpos($s, ",", $st)) {
-	$nd = strpos($s, ",", $st);
-	//echo $nd;
-	//echo "<br>";
-	$sub = substr($s, $st, $nd-$st);
-	//echo "<br>";
-	if (preg_match('/-/', $sub)) {
-		list($a, $b) = sscanf($sub, "%d-%d");
-		//echo "$a $b"; 
-		//echo "<br>";
-		if (($a < $b) & ($b <= $n)) {
-			//echo "Valid";
-			//echo "<br>";
-			$pc += ($b - $a + 1);
-			$i = $a;
-			while ($i <= $b) {
-				array_push($pages, $i);
-				$i++;
-			}
-		}
-		else {
-			return false;
-			echo "INVALID";
-			//echo "<br>";
-		}	
-	}
-	else {
-		$a = $sub;
-		//echo "$a"; 
-		//echo "<br>";
-		if ($a <= $n) {
-			//echo "Valid";
-			//echo "<br>";
-			$pc += 1;
-			array_push($pages, $a);
-		}
-		else {
-			return false;
-			echo "INVALID";
-			//echo "<br>";
-		}	
-	}
-	$st = $nd + 1;
-}
-	/*
-	if (!strpos($s, ",", $st)) {
-		$nd = $len;
-	}
-	else {
-		$nd = strpos($s, ",", $st);
-	}
-	*/
-	$nd = $len;
-	//echo $nd;
-	//echo "<br>";
-	$sub = substr($s, $st, $nd-$st);
-	//echo "<br>";
-	if (preg_match('/-/', $sub)) {
-		list($a, $b) = sscanf($sub, "%d-%d");
-		//echo "$a $b"; 
-		//echo "<br>";
-		if (($a < $b) & ($b <= $n)) {
-			//echo "Valid";
-			//echo "<br>";
-			$pc += ($b - $a + 1);
-			$i = $a;
-			while ($i <= $b) {
-				array_push($pages, $i);
-				$i++;
-			}
-		}
-		else {
-			return false;
-			echo "INVALID";
-			//echo "<br>";
-		}	
-	}
-	else {
-		$a = $sub;
-		//echo "$a"; 
-		//echo "<br>";
-		if ($a <= $n) {
-			//echo "Valid";
-			$pc += 1;
-			//echo "<br>";
-			array_push($pages, $a);
-		}
-		else {
-			return false;
-			echo "INVALID";
-			//echo "<br>";
-		}	
-	}
-	$st = $nd + 1;
-	//echo "Page count = ".$pc;
-	//echo "<br>";
-//echo "<br>";
-//print_r($pages);
-sort($pages);
-//echo "<br>";
-//print_r($pages);
-$b = array_unique($pages);
-//echo "<br>";
-//print_r($b);
-//echo "<br>";
-$pagecount = count($b);
-	$pages_string = "$b[0]";
-	$i=1;
-	while ($i < $pc) {
-		$temp = $b[$i];
-		if ($temp) {
-			$pages_string .= ",$temp";
-		}		
-		$i++;
-	}
-	$GLOBALS['RANGE_STRING'] = $pages_string;
-	$GLOBALS['PAGE_COUNT'] = $pagecount;
-	//echo "String = ".$pages_string."<br>";
-
-	return true;
-}
-
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	// AFTER GETIING THE FILE FROM USER
@@ -192,40 +59,17 @@ $pagecount = count($b);
 
 		// PRINT JOB
 		elseif (isset($_POST['printButton'])) {
-			$username = $_SESSION["username"];
 			$job_id = $_POST['printButton'];
-			//echo "Job id = $job_id <br>";
-			//$pages = mysqli_query($conn, "SELECT Pages FROM queue WHERE Job_ID=$job_id")->fetch_assoc()['value'];
-			$result = mysqli_query($conn, "SELECT * FROM queue WHERE `Job_ID`=$job_id");
-			$row = mysqli_fetch_assoc($result);
-			$pages = $row['Pages'];
-			//echo "<br>Pages = $pages <br>";
-			$s = $_POST["pagesRange$job_id"];
-			$n = $pages;
-			//echo "<br>Pages = $n <br>";
-			//echo "String = $s <br>";
-			$digit = "[1-9][\d]{0,}";
-			$reg4 = "/^(((($digit)|($digit)-($digit)),)*)(($digit)|($digit)-($digit))$/";
-			$string = preg_replace('/\s+/', '', $s);
-			//echo "String = $string <br>";
-			$RANGE_STRING = '';
-			$PAGE_COUNT = '';
-			if (pagerange($reg4, $string, $n)) {
-				//echo $RANGE_STRING;	
-				//echo ":VALID:";
-				//echo $PAGE_COUNT;
-			//echo "String = $username <br>";echo "String = $string <br>";	
-			mysqli_query($conn, "UPDATE queue SET `page_range`= '$string' WHERE `Job_ID`=$job_id");
 			//echo "Job ID = ".$job_id."<br>";
+			$pages = $_POST['pagess'];
+			echo $pages;
 			//echo "<script> alert(\"pages = $pages\");</script>";
 			// RETRIEVING JOB INFO
 			$result = mysqli_query($conn, "SELECT * FROM queue WHERE `Job_ID`=$job_id ");
 			$row = mysqli_fetch_assoc($result);
 			$user_id = $row['User_name'];
 			$file_path = $row['File_Path'];
-			$filename = $row['File_Name']; 
 			$pages = $row['Pages'];
-			$pages = $PAGE_COUNT;
 
 			unset($result);
 			// RETRIEVING QUOTA
@@ -245,31 +89,19 @@ $pagecount = count($b);
 				echo "<script> alert(\"Printer currently unavailable, please try again later!\");</script>";
 			}
 			else {
-				//exec("lp -o page-ranges=$RANGE_STRING $file_pat", $output);
-				$nop = $quota - $pages;
-				echo "<script> alert(\"Document '$filename'\\nRange = $string\\nTotal Pages = $pages\\nAfter printing quota will be '$nop'\");</script>";
-				$exec_result = exec("lp -o page-ranges=$RANGE_STRING $file_path", $exec_output, $exec_return);
-				if ($exec_return != 0) {
-					error_log("User: $username - Exec error! Return val = $exec_return");
-					echo "<script> alert(\"Error printing document, pls try again!\");</script>";
-				}				
-				else {
-					print_r($output); 
+				echo exec("lp $file_path");
+			
 				// UPDATING DB
 				mysqli_query($conn, "UPDATE queue SET `Status`=\"printed\",`Print_Time` = NOW() WHERE `Job_ID` = $job_id");
 
 				// UPDATING THE QUOTA
+				$nop = $quota - $pages;
 				mysqli_query($conn, "UPDATE users SET `quota`= $nop WHERE `username` = '$user_id'");
-				}
 			}
 		
 			}
 
 			//header("location: uploads.php");
-			}
-			else {
-				echo "<script> alert(\"Invalid page range!\");</script>";
-			}
 
 		} // END IF - ISSET PRINTBUTTON
 
@@ -489,7 +321,7 @@ function uploadFiles($conn, $configVar_uploadPath) {
 	
 	<!-- JOB CANCEL/PRINT -->
 	<span style="font-size:30px; color:maroon;"> Uploads: </span> <br>
-	<div id="amit" style="display: none;"> Hello </div>
+	<div id="amit"> Hello </div>
 	<form name="form1" action="ps/user/home.php" method="post">	
 	<table>
 		<thead>
@@ -521,17 +353,15 @@ while($row_uploads = mysqli_fetch_assoc($result_uploads_desc)) : ?>
 		<tr>
 		<td><input type="checkbox" name="cancelJobsList[]" value="<?php echo $row_uploads['Job_ID']; ?>" /></td>
 		<td><?php echo $row_uploads['Job_ID']; ?></td>
-		<td><?php echo $row_uploads['File_Name']; ?></td>
-	<?php if (isset($var_printOption) && $var_printOption == 'TRUE') : 
-		$jobid = $row_uploads['Job_ID'];
-		$pages = $row_uploads['Pages']; ?>
-		<td><input name=pagesRange<?php echo "$jobid"; ?> type="text" size="1" value=<?php if ($pages == 1) { echo $pages; } else { echo "1-$pages";} ?> onkeyup=checkPageRange(<?php echo "$jobid,$pages";?>)></td>
+		<td><?php echo $row_uploads['File_Name'] ?></td>
+	<?php if (isset($var_printOption) && $var_printOption == 'TRUE') : ?>
+		<td><input name="pagesRange" type="text" size="1" value="<?php echo $row_uploads['Pages'] ?>" onkeyup="checkPageRange()"></td>
 	<?php else : ?>
 		<td><?php echo $row_uploads['Pages'] ?></td>
 	<?php endif ?>
 		<td><?php echo $row_uploads['Uploaded_Time'] ?></td>
 	<?php if (isset($var_printOption) && $var_printOption == 'TRUE') : ?>
-		<td><input type="submit" name="printButton" onclick=checkPageRange(<?php echo "$jobid,$pages";?>) value="<?php echo $row_uploads['Job_ID']; ?>" id="print-button" style=""/></td>
+		<td><input type="submit" name="printButton" value="<?php echo $row_uploads['Job_ID']; ?>" id="print-button" style=""/></td>
 	<?php endif ?>
 		</tr>
 <?php endwhile ?>		
@@ -566,13 +396,11 @@ while($row_uploads = mysqli_fetch_assoc($result_uploads_desc)) : ?>
 
 <script>
 var request;
-var index;
-function checkPageRange(jobid, pages)
+function checkPageRange(pages)
 {
-	index = "pagesRange"+jobid;
-	var v=document.form1[index].value;
-	//pages = 7;
+	var v = document.form1.pagesRange.value;
 	var url = "ps/user/checkPageRange.php?val="+v+"&pages="+pages;
+	//pages = 7;
 	if(window.XMLHttpRequest) {
 		request=new XMLHttpRequest();
 	}
@@ -590,20 +418,18 @@ function checkPageRange(jobid, pages)
 	}
 }
 
-function getPageRangeResult() {
+function getPageRangeResult(){
 	if (request.readyState == 4) {
 		var val = request.responseText;
-		//document.getElementById('amit').innerHTML=val;
-		///*
-		if (val == "INVALID") {
-			document.getElementById('amit').innerHTML="INVALID!";
-			document.form1[index].style = "border: 2px solid red;";
+		document.getElementById('amit').innerHTML=val;
+		/*
+		if (val == "VALID") {
+			document.getElementById('amit').innerHTML = "VALID!";
 		}
 		else {
-			document.getElementById('amit').innerHTML=val;
-			document.form1[index].style = "border: 2px solid #00ff00;";
+			document.getElementById('amit').innerHTML = "INVALID!";
 		}
-		//*/
+		*/
 	}
 }
 </script>

@@ -14,55 +14,11 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (isset($_POST["quotaUpdate"])) {
 			$stream = $_POST["stream"];
-			if ($stream == "select") {
-				echo "<script> alert(\"Select stream to change Quota\"); </script>";
-			}
-			else {
-				$quota = $_POST["quota"];
-				echo "\nStream = $stream \nQuota = $quota \n";
+			$quota = $_POST["quota"];
+			echo "\nStream = $stream \nQuota = $quota \n";
 
-				$result = mysqli_query($conn, "UPDATE quota SET stream_quota = $quota WHERE stream_code = '$stream'");
-				//echo $result;	
-				if ($result) {
-					echo "|||||||||| Updation Successful |||||||||||||||||";
-					//echo "<script> setTimeout(newLocation, 1000); </script>";			
-				}
-				else {
-					echo "Updation failed!";
-				}
-				unset($result);
-				//header("location: change_quota.php");
-			}
-		}
-		if (isset($_POST["regExpUpdate"])) {
-			$stream = $_POST["stream"];
-			if ($stream == "select") {
-				echo "<script> alert(\"Select stream to change Regular Expression\"); </script>";
-			}
-			else {
-				$regExp = mysqli_real_escape_string($conn, $_POST['regExp']);
-				echo "\nStream = $stream \nRegExp = $regExp \n";
-
-				$result = mysqli_query($conn, "UPDATE quota SET reg_exp = '$regExp' WHERE stream_code = '$stream'");
-				//echo $result;	
-				if ($result) {
-					echo "|||||||||| Updation Successful |||||||||||||||||";
-					//echo "<script> setTimeout(newLocation, 1000); </script>";			
-				}
-				else {
-					echo "Updation failed!";
-				}
-				unset($result);
-				//header("location: change_quota.php");
-			else {
-				echo "Updation failed!";
-			}
-			unset($result);
-			header("location: change_quota.php");
-		}
-		if (isset($_POST['renewalTimeUpdate'])) {
-			$time = $_POST['time'];
-			$result = mysqli_query($conn, "UPDATE utility SET value='$time' WHERE name = 'quota-renewal-time'");
+			$result = mysqli_query($conn, "UPDATE quota SET stream_quota = $quota WHERE stream_code = '$stream'");
+			//echo $result;	
 			if ($result) {
 				echo "|||||||||| Updation Successful |||||||||||||||||";
 				echo "<script> setTimeout(newLocation, 1000); </script>";			
@@ -71,10 +27,22 @@
 				echo "Updation failed!";
 			}
 			unset($result);
-			header("location: change_quota.php");
 		}
-	}
+		if (isset($_POST["regExpUpdate"])) {
+			$stream = $_POST["stream"];
+			$regExp = mysqli_real_escape_string($conn, $_POST['regExp']);
+			echo "\nStream = $stream \nRegExp = $regExp \n";
+
+			$result = mysqli_query($conn, "UPDATE quota SET reg_exp = '$regExp' WHERE stream_code = '$stream'");
+			//echo $result;	
+			if ($result) {
+				echo "|||||||||| Updation Successful |||||||||||||||||";
+				echo "<script> setTimeout(newLocation, 1000); </script>";			
 			}
+			else {
+				echo "Updation failed!";
+			}
+			unset($result);
 		}
 		if (isset($_POST['stopPrint'])) {
 			$result = mysqli_query($conn, "UPDATE utility SET value='FALSE' WHERE name = 'printing'");
@@ -86,7 +54,6 @@
 				echo "Updation failed!";
 			}
 			unset($result);
-			header("location: change_quota.php");
 		}
 		if (isset($_POST['resumePrint'])) {
 			$result = mysqli_query($conn, "UPDATE utility SET value='TRUE' WHERE name = 'printing'");
@@ -98,7 +65,6 @@
 				echo "Updation failed!";
 			}
 			unset($result);
-			header("location: change_quota.php");
 		}
 		if (isset($_POST['renewalTimeUpdate'])) {
 			$time = $_POST['time'];
@@ -111,15 +77,13 @@
 				echo "Updation failed!";
 			}
 			unset($result);
-			header("location: change_quota.php");
 		}
 	}
->>>>>>> 2cfbc966f2f3eb107ba5e423f23766c79aafe557
 ?>
 
 <html>
 
-<title>Admin | Change Quota</title>
+<title>Admin</title>
 
 <head>
 	<base href="../../" />
@@ -179,30 +143,6 @@
  
 	<!----------------------------------- CHANGE QUOTA CONTENT --------------------------------------->
 
-<<<<<<< HEAD
-	<script>
-		function newLocation() { 
-			window.location="ps/admin/change_quota.php";
-		}
-		//setTimeout(newLocation, 1500)
-	</script>
-
-	<style>
-		.column {
-		    float: left;
-		    width: 50%;
-		}
-
-		/* Clear floats after the columns */
-		.row:after {
-		    content: "";
-		    display: table;
-		    clear: both;
-		}
-	</style>
-
-=======
->>>>>>> 2cfbc966f2f3eb107ba5e423f23766c79aafe557
 	<br> <br> <br>	
 	<div class="row">
 		<div class="column">
@@ -220,10 +160,7 @@
 		<?php 	endif ?>
 		</div>
 		<div class="column">
-		<?php		
-			$ren_time = mysqli_query($conn, "SELECT value FROM utility WHERE name = 'quota-renewal-time'")->fetch_assoc()['value'];
-		?>
-			<span style="font-size:25px; color:maroon;"> Renewal Time: </span> <?php echo $ren_time; ?> <br><br><br>	
+			<span style="font-size:25px; color:maroon;"> Renewal Time: </span> <br><br><br>	
 			<form action="" method="post">	
 				Select renewal time : 
 				<select name="time">
@@ -237,24 +174,20 @@
 	<br><br>
 	<div class="row">
 		<div class="column"> 
-<<<<<<< HEAD
-			<form action="ps/admin/change_quota.php" method="post">	
-=======
 			<span style="font-size:25px; color:maroon;"> Quota: </span> <br><br><br>
 			<form action="" method="post">	
->>>>>>> 2cfbc966f2f3eb107ba5e423f23766c79aafe557
 			Select Stream : 
 			<script>
-				function changeQuota(name) {
-					sendQuota(name);
-					//document.getElementById("quota").value = name;
+				function changeVal(name) {
+					sendInfo(name);
+					document.getElementById("quota").value = name;
 				}
 				var request;
-				function sendQuota(name)
+				function sendInfo(name)
 				{
 					//var v=document.vinform.t1.value;
 					var v = name;
-					var url="ps/admin/getQuotaAjax.php?val="+v;
+					var url="ps/admin/get.php?val="+v;
 
 					if(window.XMLHttpRequest){
 						request=new XMLHttpRequest();
@@ -265,7 +198,7 @@
 
 					try
 					{
-						request.onreadystatechange=getQuota;
+						request.onreadystatechange=getInfo;
 						request.open("GET",url,true);
 						request.send();
 					}
@@ -275,7 +208,7 @@
 					}
 				}
 
-				function getQuota(){
+				function getInfo(){
 					if(request.readyState==4){
 						var val=request.responseText;
 						//document.getElementById('amit').innerHTML=val;
@@ -283,8 +216,7 @@
 					}
 				}
 			</script>
-			<select name="stream" onchange="changeQuota(this.options[this.selectedIndex].value)">
-			<option value="select"> -Select- </option> 
+			<select name="stream" onchange="changeVal(this.options[this.selectedIndex].value)">
 			<?php
 				$result = '';
 				$result = mysqli_query($conn, "SELECT * FROM quota");
@@ -299,57 +231,11 @@
 			<input type="submit" value="Submit" name="quotaUpdate">	
 			</form>
 		</div>
-<<<<<<< HEAD
-<!--
-		<div class="column">  
-			<form action="ps/admin/change_quota.php" method="post">	
-=======
 		<div class="column"> 
 			<span style="font-size:25px; color:maroon;"> Regular Expression: </span> <br><br><br>	
 			<form action="" method="post">	
->>>>>>> 2cfbc966f2f3eb107ba5e423f23766c79aafe557
 			Select Stream : 
-			<script>
-				function changeRegExp(name) {
-					sendRegExp(name);
-					//document.getElementById("quota").value = name;
-				}
-				var request;
-				function sendRegExp(name)
-				{
-					//var v=document.vinform.t1.value;
-					var v = name;
-					var url="ps/admin/getRegExpAjax.php?val="+v;
-
-					if(window.XMLHttpRequest){
-						request=new XMLHttpRequest();
-					}
-					else if(window.ActiveXObject){
-						request=new ActiveXObject("Microsoft.XMLHTTP");
-					}
-
-					try
-					{
-						request.onreadystatechange=getRegExp;
-						request.open("GET",url,true);
-						request.send();
-					}
-					catch(e)
-					{
-						alert("Unable to connect to server");
-					}
-				}
-
-				function getRegExp(){
-					if(request.readyState==4){
-						var val=request.responseText;
-						//document.getElementById('amit').innerHTML=val;
-						document.getElementById("regExp").value = val;
-					}
-				}
-			</script>
-			<select name="stream" onchange="changeRegExp(this.options[this.selectedIndex].value)">
-			<option value="select"> -Select- </option>
+			<select name="stream">
 			<?php
 				mysqli_data_seek($result,0);
 				while($row = mysqli_fetch_assoc($result)) :
@@ -358,11 +244,10 @@
 				<option value="<?php echo $streamcode; ?>"><?php echo $streamname; ?></option> 
 			<?php 	endwhile ?>
 			</select> <br>
-			Regular Expression : <input type="text" name="regExp" id="regExp" value=0> <br> <br>  	
+			Regular Expression : <input type="text" name="regExp"> <br> <br>  	
 			<input type="submit" value="Submit" name="regExpUpdate">	
 			</form>
 		</div>
--->
 	</div>
 
 </div><!-- content ends here -->

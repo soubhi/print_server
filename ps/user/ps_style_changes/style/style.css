@@ -215,7 +215,8 @@ ul#menu li a:hover {
 /* SITE CONTENT - BODY */
 #site_content {
   width: 858px;
-  min-height : 600px;
+  height : 770px;
+  overflow: hidden;
   margin: 0 auto 0 auto;
   background: #F6F6F0 url(back.png) repeat-y;
   //background: #F8F8F8 repeat-y;

@@ -78,9 +78,10 @@ ul#menu li.home-selected a, ul#menu li.home-selected a:hover
 	  <h2> AILAB </h2>
 	<!------------------------------------slider----------------------------------------->
 	<?php
-		include("$include_path/carousel.php");
+		include("$include_path/components/carousel.php");
 	?>
    	<!---------------------------------slider------------------------------------->
+	  <br>
           <p>Artificial Intelligence or AI Lab is one of the many labs in the School of Computer and Information Sciences (SCIS).</p>
 	<!--
 	  <h2> An image of AI Lab in late 90s. </h2>

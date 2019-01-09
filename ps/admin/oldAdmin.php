@@ -14,7 +14,7 @@
 
 <html>
 
-<title>Admin</title>
+<title> PS | Admin</title>
 
 <head>
 	<base href="../../" />
@@ -25,12 +25,6 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 	<link rel="stylesheet" type="text/css" href="ps/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-	th:nth-child(3), td:nth-child(3) {
-		width:40%;
-	}
-	
-	</style>
 </head>
 
 <body>
@@ -52,16 +46,21 @@
 
 	</div> <!-- header ends here --> 
    <div id="site_content">
-       
+       <!------------------------------------sidebar----------------------------------------->
+	<?php
+		include("$include_path/components/sidebar.php");
+	?>
+   	<!---------------------------------sidebar------------------------------------->
+
+      <div id="content">
 	<h2> Welcome Admin! </h2>
 	 <div class="admin-box"> 
 		<div class="logout" style="float:right"><a href="ps/logout.php">logout</a></div> <br>
-		<a href="ps/admin/admin.php" class="home-button "style="background-color: grey;">&laquo; Home</a>
-		<a href="ps/admin/change_quota.php" class="nav-btn">Change Quota</a>
-		<a href="ps/admin/history.php" class="nav-btn" >View History</a>
-		<a href="ps/admin/stats.php" class="nav-btn">Statistics</a>
+		<a href="ps/admin/admin.php" class="home-button "style="">Home</a>
+		<a href="ps/admin/change_quota.php" class="change-quota">Change Quota</a>
+		<!--<div class="change-quota"><a href="ps/change_quota.php">Change Quota</a></div> <br>-->
+		<a href="ps/admin/history.php" class="history-button" >View History</a>
 
-		<br><br>
 		Uploads : <br />
 		Select Jobs to print.<br />
 		<form action="ps/admin/admin.php" method="post">	
@@ -139,6 +138,7 @@
 			echo $time;
 			mysqli_query($conn, "UPDATE queue SET `Status`=\"printed\" WHERE `Job_ID` = $job_id");
 			mysqli_query($conn, "UPDATE queue SET `Printed_Time` = '$time' WHERE `Job_ID` = $job_id");
+			mysqli_query($conn, "UPDATE queue SET `Print_Time` = NOW() WHERE `Job_ID` = $job_id");
 			$result_dummy =mysqli_query($conn,"SELECT * FROM queue WHERE `Job_ID` = $job_id");
 			$row_dummy = $result_dummy->fetch_assoc();
 			echo "<br> printed time is..".$row_dummy['Printed_Time']."<br>";
@@ -233,6 +233,7 @@
 	 </div>
 
 
+</div><!-- content ends here -->
     </div><!-- site_content ends here -->
     <!------------------------------------footer----------------------------------------->
 	<?php
