@@ -1,0 +1,469 @@
+[17-Dec-2018 12:59:43 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 101
+[17-Dec-2018 12:59:45 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 101
+[17-Dec-2018 12:59:46 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 101
+[17-Dec-2018 13:00:13 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 101
+[17-Dec-2018 13:00:53 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 101
+[17-Dec-2018 13:00:53 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 385
+[17-Dec-2018 13:00:55 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 101
+[17-Dec-2018 13:00:55 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 385
+[17-Dec-2018 13:00:58 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 101
+[17-Dec-2018 13:00:58 Asia/Calcutta] PHP Notice:  Undefined variable: var_printOption in /var/www/html/ailab/ps/user/uploads.php on line 385
+[17-Dec-2018 14:04:35 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/uploads.php on line 14
+[17-Dec-2018 14:04:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 18
+[17-Dec-2018 14:04:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 32
+[17-Dec-2018 14:04:35 Asia/Calcutta] PHP Notice:  Undefined variable: streamcode in /var/www/html/ailab/ps/user/uploads.php on line 73
+[17-Dec-2018 14:04:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 353
+[17-Dec-2018 14:04:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 394
+[17-Dec-2018 14:07:03 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/uploads.php on line 14
+[17-Dec-2018 14:07:03 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 18
+[17-Dec-2018 14:07:03 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 32
+[17-Dec-2018 14:07:03 Asia/Calcutta] PHP Notice:  Undefined variable: streamcode in /var/www/html/ailab/ps/user/uploads.php on line 73
+[17-Dec-2018 14:07:03 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 353
+[17-Dec-2018 14:07:03 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 394
+[17-Dec-2018 14:14:06 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/uploads.php on line 13
+[17-Dec-2018 14:14:59 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/uploads.php on line 14
+[17-Dec-2018 14:14:59 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 18
+[17-Dec-2018 14:14:59 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 32
+[17-Dec-2018 14:14:59 Asia/Calcutta] PHP Notice:  Undefined variable: streamcode in /var/www/html/ailab/ps/user/uploads.php on line 73
+[17-Dec-2018 14:14:59 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 353
+[17-Dec-2018 14:14:59 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/uploads.php on line 396
+[19-Dec-2018 11:32:27 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[19-Dec-2018 11:32:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[19-Dec-2018 11:32:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 32
+[19-Dec-2018 11:32:27 Asia/Calcutta] PHP Notice:  Undefined variable: streamcode in /var/www/html/ailab/ps/user/home.php on line 73
+[19-Dec-2018 11:32:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 353
+[19-Dec-2018 11:32:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 396
+[19-Dec-2018 12:35:08 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[19-Dec-2018 12:35:08 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[19-Dec-2018 12:35:08 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 32
+[19-Dec-2018 12:35:08 Asia/Calcutta] PHP Notice:  Undefined variable: streamcode in /var/www/html/ailab/ps/user/home.php on line 73
+[19-Dec-2018 12:35:08 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 353
+[19-Dec-2018 12:35:08 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 396
+[19-Dec-2018 12:41:04 Asia/Calcutta] PHP Notice:  Undefined variable: streamcode in /var/www/html/ailab/ps/user/home.php on line 73
+[19-Dec-2018 13:26:33 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[19-Dec-2018 13:58:19 Asia/Calcutta] User: mc16me09 - Moving uploaded file error!
+[19-Dec-2018 15:34:44 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 92
+[19-Dec-2018 15:54:33 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[19-Dec-2018 15:54:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[19-Dec-2018 15:54:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 32
+[19-Dec-2018 15:54:33 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 92
+[19-Dec-2018 15:54:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 384
+[19-Dec-2018 15:54:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 385
+[19-Dec-2018 15:54:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 434
+[20-Dec-2018 18:53:00 Asia/Calcutta] PHP Notice:  Use of undefined constant getClientIP - assumed 'getClientIP' in /var/www/html/ailab/ps/user/home.php on line 33
+[20-Dec-2018 18:54:03 Asia/Calcutta] PHP Notice:  Use of undefined constant getClientIP - assumed 'getClientIP' in /var/www/html/ailab/ps/user/home.php on line 33
+[20-Dec-2018 18:54:10 Asia/Calcutta] PHP Notice:  Use of undefined constant getClientIP - assumed 'getClientIP' in /var/www/html/ailab/ps/user/home.php on line 33
+[20-Dec-2018 19:03:37 Asia/Calcutta] User: mc16me09 - Moving uploaded file error!
+[20-Dec-2018 19:03:55 Asia/Calcutta] User: mc16me09 - Moving uploaded file error!
+[20-Dec-2018 19:04:09 Asia/Calcutta] User: mc16me09 - Moving uploaded file error!
+[20-Dec-2018 19:06:22 Asia/Calcutta] User: mc16me09 - Moving uploaded file error!
+[28-Dec-2018 16:02:35 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[28-Dec-2018 16:02:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[28-Dec-2018 16:02:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 444
+[28-Dec-2018 16:02:35 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 504
+[28-Dec-2018 16:02:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 294
+[28-Dec-2018 16:02:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 295
+[28-Dec-2018 16:02:35 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 343
+[28-Dec-2018 22:31:24 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 64
+[28-Dec-2018 22:40:58 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 64
+[28-Dec-2018 22:41:04 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 64
+[29-Dec-2018 06:50:49 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[29-Dec-2018 06:50:49 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[29-Dec-2018 06:50:49 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 487
+[29-Dec-2018 06:50:49 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 547
+[29-Dec-2018 06:50:49 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 294
+[29-Dec-2018 06:50:49 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 295
+[29-Dec-2018 06:50:49 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 347
+[29-Dec-2018 22:29:45 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[29-Dec-2018 22:29:45 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[29-Dec-2018 22:29:45 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 488
+[29-Dec-2018 22:29:46 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 548
+[29-Dec-2018 22:29:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 294
+[29-Dec-2018 22:29:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 295
+[29-Dec-2018 22:29:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 347
+[03-Jan-2019 10:47:51 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[03-Jan-2019 10:47:51 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[03-Jan-2019 10:47:51 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 488
+[03-Jan-2019 10:47:51 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 548
+[03-Jan-2019 10:47:51 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 294
+[03-Jan-2019 10:47:51 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 295
+[03-Jan-2019 10:47:51 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 347
+[03-Jan-2019 17:30:33 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[03-Jan-2019 17:30:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[03-Jan-2019 17:30:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 490
+[03-Jan-2019 17:30:33 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 550
+[03-Jan-2019 17:30:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 294
+[03-Jan-2019 17:30:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 295
+[03-Jan-2019 17:30:33 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 347
+[03-Jan-2019 21:27:44 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[03-Jan-2019 21:27:44 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[03-Jan-2019 21:27:44 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 492
+[03-Jan-2019 21:27:44 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 552
+[03-Jan-2019 21:27:44 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 294
+[03-Jan-2019 21:27:44 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 295
+[03-Jan-2019 21:27:44 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 347
+[03-Jan-2019 22:07:48 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[04-Jan-2019 07:49:41 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[04-Jan-2019 07:49:41 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[04-Jan-2019 07:49:41 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 492
+[04-Jan-2019 07:49:41 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 552
+[04-Jan-2019 07:49:41 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 294
+[04-Jan-2019 07:49:41 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 295
+[04-Jan-2019 07:49:41 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 347
+[04-Jan-2019 07:51:26 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 64
+[04-Jan-2019 08:07:29 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:29 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:29 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:29 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:29 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:29 Asia/Calcutta] PHP Notice:  Undefined variable: result_stream in /var/www/html/ailab/ps/user/home.php on line 46
+[04-Jan-2019 08:07:29 Asia/Calcutta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/ailab/ps/user/home.php on line 46
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: result_stream in /var/www/html/ailab/ps/user/home.php on line 46
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/ailab/ps/user/home.php on line 46
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: result_stream in /var/www/html/ailab/ps/user/home.php on line 46
+[04-Jan-2019 08:07:31 Asia/Calcutta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/ailab/ps/user/home.php on line 46
+[04-Jan-2019 08:08:14 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:08:14 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:08:14 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:08:14 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:08:14 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:08:14 Asia/Calcutta] PHP Notice:  Undefined variable: result_stream in /var/www/html/ailab/ps/user/home.php on line 46
+[04-Jan-2019 08:08:14 Asia/Calcutta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/ailab/ps/user/home.php on line 46
+[04-Jan-2019 08:12:25 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:25 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:25 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:25 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:25 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:12:26 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 36
+[04-Jan-2019 08:16:08 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 30
+[04-Jan-2019 08:16:08 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:08 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:08 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:08 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:08 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:42 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 30
+[04-Jan-2019 08:16:42 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:42 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:42 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:42 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:16:42 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 40
+[04-Jan-2019 08:17:23 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 30
+[04-Jan-2019 08:17:23 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 41
+[04-Jan-2019 08:17:23 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 41
+[04-Jan-2019 08:17:23 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 41
+[04-Jan-2019 08:17:23 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 41
+[04-Jan-2019 08:17:23 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 41
+[04-Jan-2019 08:17:52 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 31
+[04-Jan-2019 08:17:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 42
+[04-Jan-2019 08:17:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 42
+[04-Jan-2019 08:17:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 42
+[04-Jan-2019 08:17:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 42
+[04-Jan-2019 08:17:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 42
+[04-Jan-2019 08:18:13 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 32
+[04-Jan-2019 08:18:13 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:18:13 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:18:13 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:18:13 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:18:13 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:36 Asia/Calcutta] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /var/www/html/ailab/ps/user/home.php on line 31
+[04-Jan-2019 08:19:39 Asia/Calcutta] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /var/www/html/ailab/ps/user/home.php on line 31
+[04-Jan-2019 08:19:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:52 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:55 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:55 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:55 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:55 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:55 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:57 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:57 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:57 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:57 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:19:57 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:00 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:00 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:00 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:00 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:00 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:01 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:01 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:01 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:01 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:01 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:22 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:30 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:30 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:30 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:30 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:30 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:31 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:40 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:40 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:40 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:40 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:40 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:41 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:41 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:41 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:41 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 08:20:41 Asia/Calcutta] PHP Notice:  Undefined variable: id in /var/www/html/ailab/ps/user/home.php on line 43
+[04-Jan-2019 12:01:29 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 101
+[04-Jan-2019 12:06:59 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 101
+[04-Jan-2019 13:41:46 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[04-Jan-2019 13:41:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[04-Jan-2019 13:41:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 28
+[04-Jan-2019 13:41:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 535
+[04-Jan-2019 13:41:46 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 595
+[04-Jan-2019 13:41:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 337
+[04-Jan-2019 13:41:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 338
+[04-Jan-2019 13:41:46 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 390
+[04-Jan-2019 13:42:08 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 101
+[04-Jan-2019 13:42:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 101
+[04-Jan-2019 13:51:06 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 233
+[04-Jan-2019 13:51:06 Asia/Calcutta] PHP Notice:  Undefined variable: _post in /var/www/html/ailab/ps/user/home.php on line 234
+[04-Jan-2019 13:51:53 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 233
+[04-Jan-2019 13:51:53 Asia/Calcutta] PHP Notice:  Undefined variable: _post in /var/www/html/ailab/ps/user/home.php on line 234
+[04-Jan-2019 13:52:12 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 233
+[04-Jan-2019 13:52:12 Asia/Calcutta] PHP Notice:  Undefined offset: 139 in /var/www/html/ailab/ps/user/home.php on line 234
+[04-Jan-2019 13:53:18 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 233
+[04-Jan-2019 13:54:57 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 233
+[04-Jan-2019 13:58:51 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 234
+[04-Jan-2019 14:02:00 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/ailab/ps/user/home.php on line 234
+[04-Jan-2019 15:02:09 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 256
+[04-Jan-2019 15:03:46 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 256
+[04-Jan-2019 15:05:04 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:05:35 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:05:51 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:06:23 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:07:52 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:08:35 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:09:08 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:23:09 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:23:35 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:23:53 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:27:19 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:46:35 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:47:26 Asia/Calcutta] User: mc16me09 - Error updating query - Field 'page_range' doesn't have a default value
+[04-Jan-2019 15:50:16 Asia/Calcutta] PHP Notice:  Undefined index: pagess in /var/www/html/ailab/ps/user/home.php on line 257
+[04-Jan-2019 15:57:32 Asia/Calcutta] PHP Notice:  Undefined variable: file_pat in /var/www/html/ailab/ps/user/home.php on line 284
+[04-Jan-2019 15:57:41 Asia/Calcutta] PHP Notice:  Undefined variable: file_pat in /var/www/html/ailab/ps/user/home.php on line 284
+[04-Jan-2019 16:00:01 Asia/Calcutta] PHP Notice:  Undefined variable: file_pat in /var/www/html/ailab/ps/user/home.php on line 284
+[04-Jan-2019 16:04:21 Asia/Calcutta] PHP Notice:  Undefined variable: file_pat in /var/www/html/ailab/ps/user/home.php on line 285
+[04-Jan-2019 16:04:21 Asia/Calcutta] User: mc16me09 - Exec error! Return val = 1
+[04-Jan-2019 16:04:25 Asia/Calcutta] PHP Notice:  Undefined variable: file_pat in /var/www/html/ailab/ps/user/home.php on line 285
+[04-Jan-2019 16:04:25 Asia/Calcutta] User: mc16me09 - Exec error! Return val = 1
+[04-Jan-2019 16:04:34 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 291
+[04-Jan-2019 16:04:38 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 291
+[04-Jan-2019 16:04:42 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 291
+[04-Jan-2019 16:07:31 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 291
+[04-Jan-2019 16:27:17 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 294
+[04-Jan-2019 16:27:35 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 294
+[04-Jan-2019 16:31:02 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 294
+[04-Jan-2019 16:33:03 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 294
+[04-Jan-2019 16:33:07 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 294
+[04-Jan-2019 16:34:08 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 294
+[05-Jan-2019 06:46:42 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 187
+[05-Jan-2019 06:46:45 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 187
+[05-Jan-2019 06:56:12 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[05-Jan-2019 06:56:12 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[05-Jan-2019 06:56:12 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 660
+[05-Jan-2019 06:56:12 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 720
+[05-Jan-2019 06:56:12 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 462
+[05-Jan-2019 06:56:12 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 463
+[05-Jan-2019 06:56:12 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 515
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 660
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 720
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 462
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 463
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 515
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 660
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 720
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 462
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 463
+[05-Jan-2019 06:56:13 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 515
+[06-Jan-2019 13:41:34 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 257
+[06-Jan-2019 13:54:19 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 187
+[06-Jan-2019 13:54:21 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 187
+[06-Jan-2019 13:56:00 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 257
+[06-Jan-2019 14:00:10 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 257
+[07-Jan-2019 16:22:27 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[07-Jan-2019 16:22:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[07-Jan-2019 16:22:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 660
+[07-Jan-2019 16:22:27 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 720
+[07-Jan-2019 16:22:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 462
+[07-Jan-2019 16:22:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 463
+[07-Jan-2019 16:22:27 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 515
+[08-Jan-2019 15:00:01 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[08-Jan-2019 15:00:01 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[08-Jan-2019 15:00:01 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 660
+[08-Jan-2019 15:00:01 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 720
+[08-Jan-2019 15:00:01 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 462
+[08-Jan-2019 15:00:01 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 463
+[08-Jan-2019 15:00:01 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 515
+[10-Jan-2019 18:11:06 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 257
+[10-Jan-2019 21:24:21 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[10-Jan-2019 21:24:21 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[10-Jan-2019 21:24:21 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 660
+[10-Jan-2019 21:24:21 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 720
+[10-Jan-2019 21:24:21 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 462
+[10-Jan-2019 21:24:21 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 463
+[10-Jan-2019 21:24:21 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 515
+[11-Jan-2019 08:25:34 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 187
+[11-Jan-2019 08:25:38 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 187
+[11-Jan-2019 08:26:19 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 187
+[11-Jan-2019 08:32:13 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[15-Jan-2019 18:10:01 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[15-Jan-2019 18:16:46 Asia/Calcutta] PHP Notice:  Undefined variable: confirm in /var/www/html/ailab/ps/user/home.php on line 251
+[15-Jan-2019 18:16:57 Asia/Calcutta] PHP Notice:  Undefined variable: confirm in /var/www/html/ailab/ps/user/home.php on line 251
+[15-Jan-2019 18:17:02 Asia/Calcutta] PHP Notice:  Undefined variable: confirm in /var/www/html/ailab/ps/user/home.php on line 251
+[15-Jan-2019 18:17:14 Asia/Calcutta] PHP Notice:  Undefined variable: confirm in /var/www/html/ailab/ps/user/home.php on line 251
+[15-Jan-2019 18:17:23 Asia/Calcutta] PHP Notice:  Undefined variable: confirm in /var/www/html/ailab/ps/user/home.php on line 251
+[15-Jan-2019 18:18:44 Asia/Calcutta] PHP Notice:  Undefined variable: confirm in /var/www/html/ailab/ps/user/home.php on line 251
+[15-Jan-2019 18:19:03 Asia/Calcutta] PHP Notice:  Undefined variable: confirm in /var/www/html/ailab/ps/user/home.php on line 251
+[15-Jan-2019 18:25:15 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 267
+[15-Jan-2019 21:13:15 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[15-Jan-2019 21:13:15 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[15-Jan-2019 21:13:15 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 724
+[15-Jan-2019 21:13:15 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 784
+[15-Jan-2019 21:13:15 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 503
+[15-Jan-2019 21:13:15 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 504
+[15-Jan-2019 21:13:15 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 556
+[15-Jan-2019 21:13:15 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 581
+[15-Jan-2019 21:17:31 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 293
+[15-Jan-2019 21:25:08 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/home.php on line 293
+[15-Jan-2019 21:31:57 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[15-Jan-2019 22:09:20 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[15-Jan-2019 22:09:20 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[15-Jan-2019 22:09:20 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 753
+[15-Jan-2019 22:09:20 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 813
+[15-Jan-2019 22:09:20 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 532
+[15-Jan-2019 22:09:20 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 533
+[15-Jan-2019 22:09:20 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 585
+[15-Jan-2019 22:09:20 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 610
+[15-Jan-2019 22:44:06 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[15-Jan-2019 22:44:06 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[15-Jan-2019 22:44:06 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 725
+[15-Jan-2019 22:44:06 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 785
+[15-Jan-2019 22:44:06 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 504
+[15-Jan-2019 22:44:06 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 505
+[15-Jan-2019 22:44:06 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 557
+[15-Jan-2019 22:44:06 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 582
+[15-Jan-2019 22:54:47 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[15-Jan-2019 22:57:22 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[16-Jan-2019 14:42:47 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[16-Jan-2019 14:50:24 Asia/Calcutta] PHP Notice:  Undefined index: logged_in in /var/www/html/ailab/ps/user/home.php on line 14
+[16-Jan-2019 14:50:24 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 18
+[16-Jan-2019 14:50:24 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 606
+[16-Jan-2019 14:50:24 Asia/Calcutta] PHP Notice:  Undefined variable: streamquota in /var/www/html/ailab/ps/user/home.php on line 666
+[16-Jan-2019 14:50:24 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 385
+[16-Jan-2019 14:50:24 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 386
+[16-Jan-2019 14:50:24 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 438
+[16-Jan-2019 14:50:24 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/home.php on line 463
+[16-Jan-2019 14:50:59 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 13
+[16-Jan-2019 15:03:22 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 90
+[16-Jan-2019 15:03:25 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 90
+[16-Jan-2019 15:03:36 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 90
+[16-Jan-2019 15:04:36 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 49
+[16-Jan-2019 15:30:33 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 511
+[16-Jan-2019 15:30:33 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 516
+[16-Jan-2019 15:31:57 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 511
+[16-Jan-2019 15:31:57 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 516
+[16-Jan-2019 15:31:58 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 511
+[16-Jan-2019 15:31:58 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 516
+[16-Jan-2019 15:32:16 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 511
+[16-Jan-2019 15:32:16 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 516
+[16-Jan-2019 15:32:17 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 511
+[16-Jan-2019 15:32:17 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 516
+[16-Jan-2019 15:32:17 Asia/Calcutta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 511
+[16-Jan-2019 15:32:17 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 516
+[16-Jan-2019 15:34:12 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 516
+[16-Jan-2019 15:34:12 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/ailab/ps/user/home.php on line 516
+[16-Jan-2019 15:36:30 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 82
+[16-Jan-2019 15:37:57 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 124
+[16-Jan-2019 15:40:26 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 124
+[16-Jan-2019 15:43:50 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 15:43:50 Asia/Calcutta] PHP Notice:  Undefined index: file_path in /var/www/html/ailab/ps/user/printJob.php on line 14
+[16-Jan-2019 15:43:50 Asia/Calcutta] PHP Notice:  Undefined index: RANGE_STRING in /var/www/html/ailab/ps/user/printJob.php on line 15
+[16-Jan-2019 15:43:50 Asia/Calcutta] PHP Notice:  Undefined index: username in /var/www/html/ailab/ps/user/printJob.php on line 16
+[16-Jan-2019 15:43:50 Asia/Calcutta] PHP Notice:  Undefined index: job_id in /var/www/html/ailab/ps/user/printJob.php on line 18
+[16-Jan-2019 15:43:50 Asia/Calcutta] PHP Notice:  Undefined index: nop in /var/www/html/ailab/ps/user/printJob.php on line 19
+[16-Jan-2019 15:43:50 Asia/Calcutta] User:  - Exec error! Return val = 1
+[16-Jan-2019 15:47:22 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 15:47:22 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
+[16-Jan-2019 15:50:00 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 124
+[16-Jan-2019 15:50:09 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 82
+[16-Jan-2019 15:57:55 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 124
+[16-Jan-2019 16:02:54 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 16:02:54 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
+[16-Jan-2019 16:12:46 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 83
+[16-Jan-2019 16:17:00 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 16:17:00 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
+[16-Jan-2019 17:37:58 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 17:37:58 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
+[16-Jan-2019 17:39:25 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 17:39:25 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
+[16-Jan-2019 17:49:59 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 17:49:59 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
+[16-Jan-2019 17:51:02 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 128
+[16-Jan-2019 17:51:08 Asia/Calcutta] PHP Notice:  Undefined index: cancelJobsList in /var/www/html/ailab/ps/user/home.php on line 128
+[16-Jan-2019 18:19:54 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 18:19:54 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
+[16-Jan-2019 21:44:08 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 86
+[16-Jan-2019 21:44:39 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 86
+[16-Jan-2019 21:45:31 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 21:45:31 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
+[16-Jan-2019 22:54:19 Asia/Calcutta] Hello, errors!
+[16-Jan-2019 22:54:19 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27

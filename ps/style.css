@@ -1,0 +1,235 @@
+/********* FILE UPLOAD BUTTON STYLE *************/
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  color: white;
+  background-color: tomato;
+  padding: 20px 20px;
+  border-radius: 0px;
+  font-size: 25px;
+  font-weight: bold;
+  border:none !important;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/************* NAV-BAR SELECT STYLE ***********/
+
+ul#menu li.ps-selected a, ul#menu li.ps-selected a:hover
+{ background: #FFF;
+  color: navy;}
+
+/**********************************************************/
+
+body {
+	/*background:url('p3.jpg') no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-oz-background-size:cover;
+	background-size:cover;*/
+
+}
+
+input[type=text], input[type=password] {
+
+    padding: 12px 20px;
+    margin: 8px 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+
+}
+
+/** HEADING **/
+h2 {
+	color:navy;
+/*	
+	text-align: center;
+*/
+}
+
+/** LOGIN BOX **/
+div.login-box {
+
+	background-color : lightgrey;
+	width : 300px;
+	padding :16px;
+	#border : 0px solid grey;
+	margin : auto;
+
+
+}
+
+/** SUBMIT BUTTON **/
+button#login-box-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 110px;
+    margin: 8px 2px;
+    cursor: pointer;
+    border : none;
+
+}
+
+/** HOME PAGE CONTENT BOX *
+div.home-box, div.print-box, div.admin-box, div.change-quota-box{
+	width : 1000px;
+	height : 550px;
+	background-color : lightgrey;
+	padding : 16px;
+	margin : auto;
+	
+}
+
+/*UPLOAD HISTORY BOX**
+div.upload-hist-box {
+	width : 100%;
+	height : 500px;
+	/*overflow : auto;*
+	margin : auto;
+}
+
+/*PRINT HISTORY BOX**
+div.print-hist-box {
+	width : 100%;
+	height : 400px;
+	/*overflow : auto;*
+	margin : auto;
+}
+
+/* HISTORY BOX**
+div.hist-box {
+	width : 100%;
+	height : 500px;
+	overflow : auto;
+	/*margin : auto;*
+}*/
+
+/*TABLE CONTENTS - GENERAL*/
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding:5px 10px;
+}
+
+thead {
+	background:#f9f9f9;
+	display:table;
+	width:100%;
+	/*width:calc(100% - 18px);*/
+}
+
+tbody {
+	max-height:350px;
+	overflow:auto;
+	overflow-x:hidden;
+	display:block;
+	width:100%;
+}
+thead tr,tbody tr {
+	display:table;
+	width:100%;
+	table-layout:fixed;
+}
+th:nth-child(3), td:nth-child(3) {
+	width:40%;
+}
+/*tr:nth-child(even) {
+    background-color: #dddddd;
+}
+*/
+
+/** LOGOUT BUTTON **/
+.logout{
+	float: right;
+	width : 150px;
+	list-style-type : none;
+	overflow : hidden;
+	background-color : pink;
+	cursor : pointer;
+}
+.logout a {
+	color: black;
+}
+.logout:hover a {
+	color: white;
+	background-color : lightblue;
+}
+
+/** LOGOUT TEXT **/
+.logout a {
+	display : block;
+	text-align : center;
+	padding : 14px 16px;
+	text-decoration :none;
+
+}
+
+
+/** UPLOADS BUTTON, HISTORY BUTTON **/
+.home-button,.nav-btn, #cancel-button, #print-button, #reprint-button{
+    border: none;
+    color: ;
+    padding:  14px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: sans-serif;
+    font: normal 100% 'trebuchet ms', sans-serif; !important;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color : #f1f1f1;
+    width:100px;}
+.home-button:hover, .nav-btn:hover {
+	background-color : lightblue;
+	color : white;
+}
+.home-button {
+	color: white;
+	background-color:#595959;
+}
+.home-button:hover {
+	background-color :#b4b4b4;
+	color: black;
+}
+#cancel-button {
+	background-color:green;
+	color:white;
+	width: 120px;
+}
+#print-button {
+	background-color:green;
+	color:white;
+}
+#cancel-button:hover, #print-button:hover {
+	background-color : lightgreen;
+	color : black;
+}
+#reprint-button {
+	background-color:green;
+	color:white;
+}
+#reprint-button:hover {
+	background-color : lightgreen;
+	color : black;
+}
+#site_content {
+  background: #F8F8F8 repeat-y;
+} 
