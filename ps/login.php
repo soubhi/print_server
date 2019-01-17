@@ -76,8 +76,8 @@
 	<h4>Steps (just briefly)</h4>
 	<ul>
 		<li>First login (with NIS). </li>
-		<li>Then you can select the files to upload. </li>
-		<li>Once the upload is done go to print server and take the printout there. </li>
+		<li>Then you can select file to upload. </li>
+		<li>Once the upload is successful you can print. </li>
 		<a>Read more</a>
 	</ul>
 

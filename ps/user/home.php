@@ -1,4 +1,77 @@
 <!DOCTYPE html>
+<html>
+
+<title> PS | Home </title>
+
+<head>
+	<base href="../../" />
+	<link rel="shortcut icon" href="style/icon1.png" />
+	<meta name="description" content="website description" />
+	<meta name="keywords" content="website keywords, website keywords" />
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" href="ps/style.css">
+
+	<style>
+	th:nth-child(3), td:nth-child(3) {
+	        width:40%;
+	}
+	</style>
+
+<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+-->
+	<script src="ps/jquery.min.js"></script>
+	<script>
+
+	// UPLOAD - PLEASE WAIT - FUNCTION 
+	$(document).ready(function(){
+  		$("#please_wait").hide();
+		$("#submit").click(function(){
+			$("#please_wait").show();
+		});
+	});
+
+	// PAGE REFRESH FUNCTION
+	function refreshPage() {
+		location.replace("ps/user/home.php")
+	}
+
+	// PRINT JOB CONFIRM FUNCTION
+	var request;
+	function printJob(file_path,RANGE_STRING,username,job_id,nop)
+	{
+		var url = "ps/user/printJob.php?file_path="+file_path+"&RANGE_STRING="+RANGE_STRING+"&username="+username+"&job_id="+job_id+"&nop="+nop;
+		if(window.XMLHttpRequest) {
+			request=new XMLHttpRequest();
+		}
+		else if (window.ActiveXObject) {
+			request=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		try {
+			request.onreadystatechange = printJobResult;
+			request.open("GET", url, true);
+			request.send();
+		}
+		catch(e) {
+			alert("Unable to connect to server");
+			return false;
+		}
+		//refreshPage();
+		return true;
+	}
+
+	function printJobResult() {
+		if (request.readyState == 4) {
+			var val = request.responseText;
+			document.getElementById('demo').innerHTML=val;
+			refreshPage();
+		}
+	}
+	</script>
+
+</head>
 
 <?php
 	// DISPLAY ERRORS
@@ -28,166 +101,36 @@
 	// RENEWING QUOTA
 	quotaRenewal($conn);
 
-
 	// CHECKING CLIENT'S IP
 	$client_ip = getClientIP();
 	if (ipCheck($client_ip, $configVar_net, $configVar_mask)) {
 		$var_printOption = 'TRUE';
 		//header("location: server_home.php");
 	}
+	$var_printOption = 'TRUE';
 
-
-/************************ METHODS ***************************/
-function pagerange($reg4, $s, $n) {
-	if (!preg_match($reg4, $s)) {
-		return false;
-	}
-	//$n = 17;
-	$len = strlen($s);
-	$st = 0;	
-	$pc = 0;
-	$pages = array();
-
-while (strpos($s, ",", $st)) {
-	$nd = strpos($s, ",", $st);
-	//echo $nd;
-	//echo "<br>";
-	$sub = substr($s, $st, $nd-$st);
-	//echo "<br>";
-	if (preg_match('/-/', $sub)) {
-		list($a, $b) = sscanf($sub, "%d-%d");
-		//echo "$a $b"; 
-		//echo "<br>";
-		if (($a < $b) & ($b <= $n)) {
-			//echo "Valid";
-			//echo "<br>";
-			$pc += ($b - $a + 1);
-			$i = $a;
-			while ($i <= $b) {
-				array_push($pages, $i);
-				$i++;
-			}
-		}
-		else {
-			return false;
-			echo "INVALID";
-			//echo "<br>";
-		}	
-	}
-	else {
-		$a = $sub;
-		//echo "$a"; 
-		//echo "<br>";
-		if ($a <= $n) {
-			//echo "Valid";
-			//echo "<br>";
-			$pc += 1;
-			array_push($pages, $a);
-		}
-		else {
-			return false;
-			echo "INVALID";
-			//echo "<br>";
-		}	
-	}
-	$st = $nd + 1;
-}
-	/*
-	if (!strpos($s, ",", $st)) {
-		$nd = $len;
-	}
-	else {
-		$nd = strpos($s, ",", $st);
-	}
-	*/
-	$nd = $len;
-	//echo $nd;
-	//echo "<br>";
-	$sub = substr($s, $st, $nd-$st);
-	//echo "<br>";
-	if (preg_match('/-/', $sub)) {
-		list($a, $b) = sscanf($sub, "%d-%d");
-		//echo "$a $b"; 
-		//echo "<br>";
-		if (($a < $b) & ($b <= $n)) {
-			//echo "Valid";
-			//echo "<br>";
-			$pc += ($b - $a + 1);
-			$i = $a;
-			while ($i <= $b) {
-				array_push($pages, $i);
-				$i++;
-			}
-		}
-		else {
-			return false;
-			echo "INVALID";
-			//echo "<br>";
-		}	
-	}
-	else {
-		$a = $sub;
-		//echo "$a"; 
-		//echo "<br>";
-		if ($a <= $n) {
-			//echo "Valid";
-			$pc += 1;
-			//echo "<br>";
-			array_push($pages, $a);
-		}
-		else {
-			return false;
-			echo "INVALID";
-			//echo "<br>";
-		}	
-	}
-	$st = $nd + 1;
-	//echo "Page count = ".$pc;
-	//echo "<br>";
-//echo "<br>";
-//print_r($pages);
-sort($pages);
-//echo "<br>";
-//print_r($pages);
-$b = array_unique($pages);
-//echo "<br>";
-//print_r($b);
-//echo "<br>";
-$pagecount = count($b);
-	$pages_string = "$b[0]";
-	$i=1;
-	while ($i < $pc) {
-		$temp = $b[$i];
-		if ($temp) {
-			$pages_string .= ",$temp";
-		}		
-		$i++;
-	}
-	$GLOBALS['RANGE_STRING'] = $pages_string;
-	$GLOBALS['PAGE_COUNT'] = $pagecount;
-	//echo "String = ".$pages_string."<br>";
-
-	return true;
-}
-
+	/************** SERVER METHODS *******************/
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-	// AFTER GETIING THE FILE FROM USER
+		// AFTER GETIING THE FILE FROM USER
 		if (isset($_FILES['uploadFile'])) {
 			if (!uploadFiles($conn, $configVar_uploadPath)) {
-				echo "<script> alert(\"File upload Unsuccessful!\");</script>";
+				echo "<script> alert(\"File upload Unsuccessful!\"); refreshPage();</script>";
 			}
 			else {
-				echo "<script> alert(\"File upload Successful!\");</script>";
+				echo "<script> alert(\"File upload Successful!\"); refreshPage();</script>";
 			}
+			//echo "<script> refreshPage();</script>";
 		} // END IF - ISSET UPLOADFILE
 
 		// CANCEL JOBS
 		if (isset($_POST['cancelButton'])) {
 			$jobsList = $_POST['cancelJobsList'];
 			cancelJobs($conn, $jobsList);
+			echo "<script> refreshPage();</script>";
 			//echo "<meta http-equiv='refresh' content='0'>";
-			header("location: home.php");		
+			//header("location: home.php");
+			echo "<script> refreshPage();</script>";		
 		} // END IF - ISSET CANCELBUTTON
 
 		// PRINT JOB
@@ -214,62 +157,63 @@ $pagecount = count($b);
 				//echo $RANGE_STRING;	
 				//echo ":VALID:";
 				//echo $PAGE_COUNT;
-			//echo "String = $username <br>";echo "String = $string <br>";	
-			mysqli_query($conn, "UPDATE queue SET `page_range`= '$string' WHERE `Job_ID`=$job_id");
-			//echo "Job ID = ".$job_id."<br>";
-			//echo "<script> alert(\"pages = $pages\");</script>";
-			// RETRIEVING JOB INFO
-			$result = mysqli_query($conn, "SELECT * FROM queue WHERE `Job_ID`=$job_id ");
-			$row = mysqli_fetch_assoc($result);
-			$user_id = $row['User_name'];
-			$file_path = $row['File_Path'];
-			$filename = $row['File_Name']; 
-			$pages = $row['Pages'];
-			$pages = $PAGE_COUNT;
+				//echo "String = $username <br>";echo "String = $string <br>";	
+				mysqli_query($conn, "UPDATE queue SET `page_range`= '$string',`page_count`=$PAGE_COUNT WHERE `Job_ID`=$job_id");
+				//echo "Job ID = ".$job_id."<br>";
+				//echo "<script> alert(\"pages = $pages\");</script>";
+				// RETRIEVING JOB INFO
+				$result = mysqli_query($conn, "SELECT * FROM queue WHERE `Job_ID`=$job_id ");
+				$row = mysqli_fetch_assoc($result);
+				$user_id = $row['User_name'];
+				$file_path = $row['File_Path'];
+				$filename = $row['File_Name']; 
+				$pages = $row['Pages'];
+				$pages = $PAGE_COUNT;
 
-			unset($result);
-			// RETRIEVING QUOTA
-			$result = mysqli_query($conn, "SELECT `quota` FROM users WHERE `username`='$user_id'");
-			$row = $result->fetch_assoc();	
-			$quota = $row['quota'];
+				unset($result);
+				// RETRIEVING QUOTA
+				$result = mysqli_query($conn, "SELECT `quota` FROM users WHERE `username`='$user_id'");
+				$row = $result->fetch_assoc();	
+				$quota = $row['quota'];
 
-			// CHECKING QUOTA
-			if ($pages > $quota) {
-				echo "<script> alert(\"Sorry, not enough quota!\");</script>";
-			}
-			else {
-	
-			// PRINTING THE JOB
-			$printing = mysqli_query($conn, "SELECT value FROM utility WHERE name = 'printing'")->fetch_assoc()['value'];
-			if ($printing != 'TRUE') {
-				echo "<script> alert(\"Printer currently unavailable, please try again later!\");</script>";
-			}
-			else {
-				//exec("lp -o page-ranges=$RANGE_STRING $file_pat", $output);
-				$nop = $quota - $pages;
-				echo "<script> alert(\"Document '$filename'\\nRange = $string\\nTotal Pages = $pages\\nAfter printing quota will be '$nop'\");</script>";
-				$exec_result = exec("lp -o page-ranges=$RANGE_STRING $file_path", $exec_output, $exec_return);
-				if ($exec_return != 0) {
-					error_log("User: $username - Exec error! Return val = $exec_return");
-					echo "<script> alert(\"Error printing document, pls try again!\");</script>";
-				}				
-				else {
-					print_r($output); 
-				// UPDATING DB
-				mysqli_query($conn, "UPDATE queue SET `Status`=\"printed\",`Print_Time` = NOW() WHERE `Job_ID` = $job_id");
-
-				// UPDATING THE QUOTA
-				mysqli_query($conn, "UPDATE users SET `quota`= $nop WHERE `username` = '$user_id'");
+				// CHECKING QUOTA
+				if ($pages > $quota) {
+					echo "<script> alert(\"Sorry, not enough quota!\");</script>";
 				}
-			}
-		
-			}
+				else {
+	
+					// PRINTING THE JOB
+					$printing = mysqli_query($conn, "SELECT value FROM utility WHERE name = 'printing'")->fetch_assoc()['value'];
+					if ($printing != 'TRUE') {
+						echo "<script> alert(\"Printer currently unavailable, please try again later!\");</script>";
+					}
+					else {
+						//exec("lp -o page-ranges=$RANGE_STRING $file_pat", $output);
+						$nop = $quota - $pages; ?>
+						<script>
+						if (confirm("<?php echo "Document '$filename'\\nRange = $string\\nTotal Pages = $pages\\nAfter printing quota will be '$nop'"; ?>")) {
+							//alert("This shouldn't appear!");
+							printJob(<?php echo "\"$file_path\",\"$RANGE_STRING\",\"$username\",\"$job_id\",\"$nop\""; ?>); 
+						}
+						else {
+							//alert("Print Cancelled");
+							refreshPage();
+	
+						} // END IF - confirm() print
+						//refreshPage();
+						</script>
+						<?php
 
-			//header("location: uploads.php");
+					} // END IF - $printing != 'TRUE'
+		
+				} // END IF - (pages > quota)
+
 			}
 			else {
 				echo "<script> alert(\"Invalid page range!\");</script>";
-			}
+			} // END IF - pageRange()
+			//echo "<script> alert(\"Done!\");</script>";
+			//echo "<script> refreshPage();</script>";
 
 		} // END IF - ISSET PRINTBUTTON
 
@@ -369,6 +313,24 @@ function uploadFiles($conn, $configVar_uploadPath) {
 
 } // END IF - UPLOAD FILE - FUNCTION
 
+/* NEW CODE FOR PRINTING JOBS
+
+						/*
+							$exec_result = exec("lp -o page-ranges=$RANGE_STRING $file_path", $exec_output, $exec_return);
+							if ($exec_return != 0) {
+								error_log("User: $username - Exec error! Return val = $exec_return");
+								echo "<script> alert(\"Error printing document, pls try again!\");</script>";
+							}				
+							else {
+								print_r($output); 
+							// UPDATING DB
+							mysqli_query($conn, "UPDATE queue SET `Status`=\"printed\",`Print_Time` = NOW() WHERE `Job_ID` = $job_id");
+
+							// UPDATING THE QUOTA
+							mysqli_query($conn, "UPDATE users SET `quota`= $nop WHERE `username` = '$user_id'");
+							}
+						*/
+
 
 /* CODE FOR PRINTING JOBS
       		$result = mysqli_query($conn, "SELECT * FROM queue WHERE `Job_ID`=$job_id");
@@ -402,37 +364,6 @@ function uploadFiles($conn, $configVar_uploadPath) {
 */
 ?>
 
-<html>
-
-<title> PS | Home </title>
-
-<head>
-	<base href="../../" />
-	<link rel="shortcut icon" href="style/icon1.png" />
-	<meta name="description" content="website description" />
-	<meta name="keywords" content="website keywords, website keywords" />
-	<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-	<link rel="stylesheet" type="text/css" href="style/style.css" />
-	<link rel="stylesheet" type="text/css" href="ps/style.css">
-
-	<style>
-	th:nth-child(3), td:nth-child(3) {
-	        width:40%;
-	}
-	</style>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-	$(document).ready(function(){
-  		$("#please_wait").hide();
-		$("#submit").click(function(){
-			$("#please_wait").show();
-		});
-	});
-	</script>
-
-</head>
-
 <body>
 
 <div id="main">
@@ -457,7 +388,7 @@ function uploadFiles($conn, $configVar_uploadPath) {
 
 <div id="site_content">
 
-
+<div id="demo" style="display: none;"> Demo </div>
 	<!-----------------------------main site content------------------------------------->
 	<h2> Welcome <?php echo $_SESSION['username'] ?>!</h2>
 <?php	$username = $_SESSION['username'];
@@ -469,12 +400,10 @@ function uploadFiles($conn, $configVar_uploadPath) {
 <br>
 <div class="home-box">
 	<div class="logout" style="float:right"><a href="ps/logout.php">Logout</a></div>
-	<!--
-	<a href="ps/user/home.php" class="home-button "style="background-color: grey;">Home</a>
-	<a href="ps/user/uploads.php" class="uploads-button ">View Uploads</a>
-	<a href="ps/user/history.php" class="history-button ">View History</a><br />
-	-->
-	<!-- FILE UPLOAD -->
+
+
+
+<!------------------ FILE UPLOAD -------------------->
 	<form action="" method="POST" enctype="multipart/form-data">
 		<input type="submit" value="Upload" style="display:none" id="submit"/>
 		<!--- UPLOAD BUTTON -->
@@ -487,10 +416,10 @@ function uploadFiles($conn, $configVar_uploadPath) {
 </div>
 <br><br>
 	
-	<!-- JOB CANCEL/PRINT -->
+<!----------------- JOB CANCEL/PRINT ----------------->
 	<span style="font-size:30px; color:maroon;"> Uploads: </span> <br>
 	<div id="amit" style="display: none;"> Hello </div>
-	<form name="form1" action="ps/user/home.php" method="post">	
+<form name="form1" action="ps/user/home.php" method="post">	
 	<table>
 		<thead>
 		<tr>
@@ -504,20 +433,20 @@ function uploadFiles($conn, $configVar_uploadPath) {
 	<?php endif ?>
 		<th> Date and Time of Upload </th>
 	<?php if (isset($var_printOption) && $var_printOption == 'TRUE') : ?>
-		<th> Print </th>
+		<th> Click the Job ID to Print </th>
 	<?php endif ?>
 		</tr>
 		</thead>
 
 		<tbody>	
 
-<?php
-$username = $_SESSION["username"];
-$result_uploads = mysqli_query($conn, "SELECT * FROM queue WHERE User_name = '$username' AND Status = 'not-printed'");
-$uploads_count = mysqli_num_rows($result_uploads);
-$result_uploads_desc = mysqli_query($conn, "SELECT * FROM queue WHERE User_name = '$username' AND Status = 'not-printed' ORDER BY Job_ID DESC LIMIT $uploads_count");
+	<?php
+	$username = $_SESSION["username"];
+	$result_uploads = mysqli_query($conn, "SELECT * FROM queue WHERE User_name = '$username' AND Status = 'not-printed'");
+	$uploads_count = mysqli_num_rows($result_uploads);
+	$result_uploads_desc = mysqli_query($conn, "SELECT * FROM queue WHERE User_name = '$username' AND Status = 'not-printed' ORDER BY Job_ID DESC LIMIT $uploads_count");
 				
-while($row_uploads = mysqli_fetch_assoc($result_uploads_desc)) : ?>
+	while($row_uploads = mysqli_fetch_assoc($result_uploads_desc)) : ?>
 		<tr>
 		<td><input type="checkbox" name="cancelJobsList[]" value="<?php echo $row_uploads['Job_ID']; ?>" /></td>
 		<td><?php echo $row_uploads['Job_ID']; ?></td>
@@ -534,12 +463,55 @@ while($row_uploads = mysqli_fetch_assoc($result_uploads_desc)) : ?>
 		<td><input type="submit" name="printButton" onclick=checkPageRange(<?php echo "$jobid,$pages";?>) value="<?php echo $row_uploads['Job_ID']; ?>" id="print-button" style=""/></td>
 	<?php endif ?>
 		</tr>
-<?php endwhile ?>		
+	<?php endwhile ?>	
 		</tbody>
 
 	</table>
-		<input type="submit" name="cancelButton" value="Cancel Job(s)" id="cancel-button" style=""/>
-	</form>	
+		<input type="submit" name="cancelButton" value="Cancel Job(s)" id="cancel-button" style=""/> <br> <br>
+	<table>
+		<thead>
+		<tr>
+		<th> Job ID </th>
+		<th> User ID </th>
+		<th> File Name </th>
+		<th> Page Range </th>
+		<th> Date and Time of Print </th>
+		<th> Status </th>
+		</tr>
+		</thead>
+
+	<tbody>	
+
+<br><br>
+<span style="font-size:30px; color:maroon;"> History: </span> <br>
+		<?php
+		$username = $_SESSION["username"];
+		
+		//$result_printed = mysqli_query($conn, "SELECT * FROM queue WHERE (`Status`=\"printed\" OR `Status`=\"cancelled\")");
+		$result_printed = mysqli_query($conn, "SELECT * FROM queue WHERE `Status`!=\"printed\"");
+		$hist_count = mysqli_num_rows($result_printed);
+		//$result_printed_desc = mysqli_query($conn,"SELECT * FROM queue WHERE (`Status`=\"printed\" OR `Status`=\"cancelled\") ORDER BY Job_ID DESC LIMIT $hist_count");
+		$result_printed_desc = mysqli_query($conn,"SELECT * FROM queue WHERE (`Status`!=\"not-printed\" AND `User_name`='$username') ORDER BY Job_ID DESC LIMIT $hist_count");
+		
+				
+		while($row_printed = mysqli_fetch_assoc($result_printed_desc))	 : ?>
+
+	    <!--echo $row3['Job_ID']." ".$row3['File_Name']."\t".$row3['Pages']."\t".$row3['Time']."<br>";
+	    #echo $row3[0]." ".$row3[2]."\t".$row3[4]."\t".$row3[6]."<br>"-->
+		
+			<tr>
+			<td><?php echo $row_printed['Job_ID']; ?></td>
+			<td><?php echo $row_printed['User_name']; ?></td>
+			<td><?php echo $row_printed['File_Name']; ?></td>
+			<td><?php echo $row_printed['page_range']; ?></td>
+			<td><?php echo $row_printed['Print_Time']; ?></td>
+			<td><?php echo $row_printed['Status']; ?></td>
+			</tr>
+		<?php endwhile ?>		
+	</tbody>
+
+	</table>
+</form>	
 
 
 	<!-----------------------------main site content------------------------------------->
@@ -728,4 +700,136 @@ function quotaRenewal($conn)
 	}
 }
 
+/************************ METHODS ***************************/
+function pagerange($reg4, $s, $n) {
+	if (!preg_match($reg4, $s)) {
+		return false;
+	}
+	//$n = 17;
+	$len = strlen($s);
+	$st = 0;	
+	$pc = 0;
+	$pages = array();
+
+while (strpos($s, ",", $st)) {
+	$nd = strpos($s, ",", $st);
+	//echo $nd;
+	//echo "<br>";
+	$sub = substr($s, $st, $nd-$st);
+	//echo "<br>";
+	if (preg_match('/-/', $sub)) {
+		list($a, $b) = sscanf($sub, "%d-%d");
+		//echo "$a $b"; 
+		//echo "<br>";
+		if (($a < $b) & ($b <= $n)) {
+			//echo "Valid";
+			//echo "<br>";
+			$pc += ($b - $a + 1);
+			$i = $a;
+			while ($i <= $b) {
+				array_push($pages, $i);
+				$i++;
+			}
+		}
+		else {
+			return false;
+			echo "INVALID";
+			//echo "<br>";
+		}	
+	}
+	else {
+		$a = $sub;
+		//echo "$a"; 
+		//echo "<br>";
+		if ($a <= $n) {
+			//echo "Valid";
+			//echo "<br>";
+			$pc += 1;
+			array_push($pages, $a);
+		}
+		else {
+			return false;
+			echo "INVALID";
+			//echo "<br>";
+		}	
+	}
+	$st = $nd + 1;
+}
+	/*
+	if (!strpos($s, ",", $st)) {
+		$nd = $len;
+	}
+	else {
+		$nd = strpos($s, ",", $st);
+	}
+	*/
+	$nd = $len;
+	//echo $nd;
+	//echo "<br>";
+	$sub = substr($s, $st, $nd-$st);
+	//echo "<br>";
+	if (preg_match('/-/', $sub)) {
+		list($a, $b) = sscanf($sub, "%d-%d");
+		//echo "$a $b"; 
+		//echo "<br>";
+		if (($a < $b) & ($b <= $n)) {
+			//echo "Valid";
+			//echo "<br>";
+			$pc += ($b - $a + 1);
+			$i = $a;
+			while ($i <= $b) {
+				array_push($pages, $i);
+				$i++;
+			}
+		}
+		else {
+			return false;
+			echo "INVALID";
+			//echo "<br>";
+		}	
+	}
+	else {
+		$a = $sub;
+		//echo "$a"; 
+		//echo "<br>";
+		if ($a <= $n) {
+			//echo "Valid";
+			$pc += 1;
+			//echo "<br>";
+			array_push($pages, $a);
+		}
+		else {
+			return false;
+			echo "INVALID";
+			//echo "<br>";
+		}	
+	}
+	$st = $nd + 1;
+	//echo "Page count = ".$pc;
+	//echo "<br>";
+//echo "<br>";
+//print_r($pages);
+sort($pages);
+//echo "<br>";
+//print_r($pages);
+$b = array_unique($pages);
+//echo "<br>";
+//print_r($b);
+//echo "<br>";
+$pagecount = count($b);
+	$pages_string = "$b[0]";
+	$i=1;
+	while ($i < $pc) {
+		$temp = $b[$i];
+		if ($temp) {
+			$pages_string .= ",$temp";
+		}		
+		$i++;
+	}
+	$GLOBALS['RANGE_STRING'] = $pages_string;
+	$GLOBALS['PAGE_COUNT'] = $pagecount;
+	//echo "String = ".$pages_string."<br>";
+
+	return true;
+}
 ?>

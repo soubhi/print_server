@@ -137,7 +137,7 @@ thead {
 }
 
 tbody {
-	height:450px;
+	max-height:350px;
 	overflow:auto;
 	overflow-x:hidden;
 	display:block;
@@ -184,7 +184,7 @@ th:nth-child(3), td:nth-child(3) {
 
 
 /** UPLOADS BUTTON, HISTORY BUTTON **/
-.home-button,.nav-btn, #cancel-button, #print-button{
+.home-button,.nav-btn, #cancel-button, #print-button, #reprint-button{
     border: none;
     color: ;
     padding:  14px 16px;
@@ -214,13 +214,19 @@ th:nth-child(3), td:nth-child(3) {
 	color:white;
 	width: 120px;
 }
-
 #print-button {
 	background-color:green;
 	color:white;
 }
-
 #cancel-button:hover, #print-button:hover {
+	background-color : lightgreen;
+	color : black;
+}
+#reprint-button {
+	background-color:green;
+	color:white;
+}
+#reprint-button:hover {
 	background-color : lightgreen;
 	color : black;
 }

@@ -54,6 +54,26 @@
 				}
 				unset($result);
 				//header("location: change_quota.php");
+			}
+		}
+		if (isset($_POST['stopPrint'])) {
+			$result = mysqli_query($conn, "UPDATE utility SET value='FALSE' WHERE name = 'printing'");
+			if ($result) {
+				echo "|||||||||| Updation Successful |||||||||||||||||";
+				echo "<script> setTimeout(newLocation, 1000); </script>";			
+			}
+			else {
+				echo "Updation failed!";
+			}
+			unset($result);
+			header("location: change_quota.php");
+		}
+		if (isset($_POST['resumePrint'])) {
+			$result = mysqli_query($conn, "UPDATE utility SET value='TRUE' WHERE name = 'printing'");
+			if ($result) {
+				echo "|||||||||| Updation Successful |||||||||||||||||";
+				echo "<script> setTimeout(newLocation, 1000); </script>";			
+			}
 			else {
 				echo "Updation failed!";
 			}
@@ -74,7 +94,6 @@
 			header("location: change_quota.php");
 		}
 	}
-		
 ?>
 
 <html>
@@ -139,27 +158,6 @@
  
 	<!----------------------------------- CHANGE QUOTA CONTENT --------------------------------------->
 
-	<script>
-		function newLocation() { 
-			window.location="ps/admin/change_quota.php";
-		}
-		//setTimeout(newLocation, 1500)
-	</script>
-
-	<style>
-		.column {
-		    float: left;
-		    width: 50%;
-		}
-
-		/* Clear floats after the columns */
-		.row:after {
-		    content: "";
-		    display: table;
-		    clear: both;
-		}
-	</style>
-
 	<br> <br> <br>	
 	<div class="row">
 		<div class="column">
@@ -194,7 +192,8 @@
 	<br><br>
 	<div class="row">
 		<div class="column"> 
-			<form action="ps/admin/change_quota.php" method="post">	
+			<span style="font-size:25px; color:maroon;"> Quota: </span> <br><br><br>
+			<form action="" method="post">	
 			Select Stream : 
 			<script>
 				function changeQuota(name) {
@@ -251,8 +250,9 @@
 			<input type="submit" value="Submit" name="quotaUpdate">	
 			</form>
 		</div>
-		<div class="column">  
-			<form action="ps/admin/change_quota.php" method="post">	
+		<div class="column"> 
+			<span style="font-size:25px; color:maroon;"> Regular Expression: </span> <br><br><br>	
+			<form action="" method="post">	
 			Select Stream : 
 			<script>
 				function changeRegExp(name) {
