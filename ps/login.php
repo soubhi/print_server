@@ -5,7 +5,11 @@
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
+<<<<<<< HEAD
 	ini_set("log_errors", "error.log");
+=======
+	ini_set("log_errors", 1);
+>>>>>>> origin/master
 	ini_set("error_log", "error.log");
 	//error_log( "Hello, errors!" );
 
@@ -76,8 +80,13 @@
 	<h4>Steps (just briefly)</h4>
 	<ul>
 		<li>First login (with NIS). </li>
+<<<<<<< HEAD
 		<li>Then you can select file to upload. </li>
 		<li>Once the upload is successful you can print. </li>
+=======
+		<li>Then you can select the files to upload. </li>
+		<li>Once the upload is done go to print server and take the printout there. </li>
+>>>>>>> origin/master
 		<a>Read more</a>
 	</ul>
 

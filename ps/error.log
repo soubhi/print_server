@@ -5,4 +5,7 @@ Stack trace:
   thrown in /var/www/html/ailab/ps/login.php on line 172
 [15-Jan-2019 22:09:22 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/login.php on line 13
 [16-Jan-2019 14:36:59 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/login.php on line 13
+<<<<<<< HEAD
 [17-Jan-2019 13:54:51 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/login.php on line 13
+=======
+>>>>>>> origin/master

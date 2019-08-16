@@ -107,7 +107,11 @@
 		$var_printOption = 'TRUE';
 		//header("location: server_home.php");
 	}
+<<<<<<< HEAD
 	//$var_printOption = 'TRUE';
+=======
+	$var_printOption = 'TRUE';
+>>>>>>> origin/master
 
 	/************** SERVER METHODS *******************/
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
