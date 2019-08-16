@@ -30,6 +30,13 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 	<link rel="stylesheet" type="text/css" href="ps/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+	th:nth-child(3), td:nth-child(3) {
+		width:40%;
+	}
+	
+	</style>
 </head>
 
 <body>
@@ -51,20 +58,14 @@
 
 	</div> <!-- header ends here --> 
    <div id="site_content">
-       <!------------------------------------sidebar----------------------------------------->
-	<?php
-		include("$include_path/components/sidebar.php");
-	?>
-   	<!---------------------------------sidebar------------------------------------->
-
-      <div id="content">
+ 
 
    <h2> Welcome <?php echo $_SESSION['username'] ?>!</h2>
 
 	<div class="logout" style="float:right"><a href="ps/logout.php">Logout</a></div>
 	<a href="ps/user/home.php" class="home-button ">&laquo; Home</a>
-	<a href="ps/user/uploads.php" class="uploads-button">View Uploads</a>
-	<a href="ps/user/history.php" class="history-button ">View History</a><br />
+	<a href="ps/user/uploads.php" class="nav-btn" style="background-color: lightblue; color: white;">View Uploads</a>
+	<a href="ps/user/history.php" class="nav-btn">View History</a><br />
 	<br />
 	Upload History :
 	<!--<div class = "upload-hist-box">-->
@@ -107,7 +108,6 @@
 	<br/> 
 	<!--</div>-->
 
- </div><!-- content ends here -->
     </div><!-- site_content ends here -->
     <!------------------------------------footer----------------------------------------->
 	<?php
