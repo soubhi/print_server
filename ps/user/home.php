@@ -385,7 +385,6 @@ function uploadFiles($conn, $configVar_uploadPath) {
 </div> <!-- header ends here --> 
 
 
-
 <div id="site_content">
 
 <div id="demo" style="display: none;"> Demo </div>
