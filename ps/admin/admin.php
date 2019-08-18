@@ -358,8 +358,8 @@
 			<td><?php echo $row_printed['Job_ID']; ?></td>
 			<td><?php echo $row_printed['User_name']; ?></td>
 			<td><?php echo $row_printed['File_Name']; ?></td>
-			<td><?php $page_count = $row_printed['page_count']; echo $row_printed['page_range']."  ($page_count)"; ?></td>
-			<td><?php echo $row_printed['Pages']; ?></td>
+			<td><?php $page_count = $row_printed['page_count']; echo $row_printed['page_range']; ?></td>
+			<td><?php echo "$page_count / ".$row_printed['Pages']; ?></td>
 			<td><?php echo $row_printed['Print_Time']; ?></td>
 			<td><?php echo $row_printed['Status']; ?></td>
 		<?php if ($row_printed['Status'] == 'printed') : ?>

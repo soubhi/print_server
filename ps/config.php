@@ -1,5 +1,12 @@
 <?php
 
+	// PHP ERRORS
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
+	ini_set("log_errors", "error.log");
+	ini_set("error_log", "error.log");
+
 	// SET CONNECTION DETAILS
 	$conn = mysqli_connect("localhost", "root", "root123");
 	mysqli_select_db($conn, "print_server");
@@ -17,6 +24,7 @@
 	//$password_path = "ypcat passwd";
 	$password_path = "cat /home/printmaster/ypcat_passwd_20181201.txt";
 	$configVar_uploadPath = "/home/printmaster/uploads/"; 
+	//$configVar_uploadPath = "/var/printmaster/uploads/";
 	$configVar_net = "192.168.0.0";
 	$configVar_mask = "24";
 	//$configVar_net = "10.5.0.0";
