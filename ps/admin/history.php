@@ -58,11 +58,12 @@
    <div id="site_content">
       
 	<h2> Welcome Admin! </h2>
-		<div class="logout" style="float:right"><a href="ps/logout.php">logout</a></div> <br>
-		<a href="ps/admin/admin.php" class="home-button "style="background-color: grey;">&laquo; Home</a>
-		<a href="ps/admin/change_quota.php" class="nav-btn" >Change Quota</a>
-		<a href="ps/admin/history.php" class="nav-btn" >View History</a>
-		<a href="ps/admin/stats.php" class="nav-btn">Statistics</a>
+	<h4> History </h4>
+        <!-- ----------------------------admin-navigation-bar-------------------------------------- -->
+        <?php
+                include("$include_path/ps/admin/admin-nav-bar.php");
+        ?>
+        <!-- -----------------------admin-navigation-bar----------------------------------->
 
 		<br><br>
 		History:

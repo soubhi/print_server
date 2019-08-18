@@ -4,7 +4,7 @@
 	ini_set('display_errors', "log.txt");
 	ini_set('display_startup_errors', "log.txt");
 	error_reporting(E_ALL);
-	ini_set("log_errors", 1);
+	ini_set("log_errors", "error.log");
 	ini_set("error_log", "error.log");
 	//error_log( "Hello, errors!" );
 
@@ -267,12 +267,12 @@
 
 <div id="site_content">
 <h2> Welcome Admin! </h2>
-	 <div class="admin-box"> 
-		<div class="logout" style="float:right"><a href="ps/logout.php">logout</a></div> <br>
-		<a href="ps/admin/admin.php" class="home-button "style="background-color: grey;">&laquo; Home</a>
-		<a href="ps/admin/change_quota.php" class="nav-btn">Change Quota</a>
-		<a href="ps/admin/history.php" class="nav-btn" >View History</a>
-		<a href="ps/admin/stats.php" class="nav-btn">Statistics</a>
+<h4> Home </h4>
+	<!-- ----------------------------admin-navigation-bar-------------------------------------- -->
+	<?php
+		include("$include_path/ps/admin/admin-nav-bar.php");
+	?>
+	<!-- -----------------------admin-navigation-bar----------------------------------->
 
 <div id="demo" style="display: none;"> Demo </div>
 

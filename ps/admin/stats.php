@@ -85,13 +85,14 @@
    <div id="site_content">
        
 	<h2> Welcome Admin! </h2>
-	 <div class="admin-box"> 
-		<div class="logout" style="float:right"><a href="ps/logout.php">logout</a></div> <br>
-		<a href="ps/admin/admin.php" class="home-button "style="background-color: grey;">&laquo; Home</a>
-		<a href="ps/admin/change_quota.php" class="nav-btn">Change Quota</a>
-		<a href="ps/admin/history.php" class="nav-btn" >View History</a>
-		<a href="ps/admin/stats.php" class="nav-btn" style="background-color: lightblue; color: white;">Statistics</a>
 	
+	<h4> Stats </h4>
+        <!-- ----------------------------admin-navigation-bar-------------------------------------- -->
+        <?php
+                include("$include_path/ps/admin/admin-nav-bar.php");
+        ?>
+        <!-- -----------------------admin-navigation-bar----------------------------------->
+
 		<br><br><br>
 		<span style="font-size:25px; color:maroon;"> Stats: </span> <br><br><br>
 
