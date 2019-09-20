@@ -468,3 +468,5 @@
 [16-Jan-2019 22:54:19 Asia/Calcutta] Hello, errors!
 [16-Jan-2019 22:54:19 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27
 [17-Jan-2019 13:56:00 Asia/Calcutta] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php/sessions) failed: Permission denied (13) in /var/www/html/ailab/ps/user/home.php on line 86
+[07-Sep-2019 16:06:53 Asia/Calcutta] Hello, errors!
+[07-Sep-2019 16:06:53 Asia/Calcutta] PHP Notice:  Undefined variable: output in /var/www/html/ailab/ps/user/printJob.php on line 27

@@ -23,13 +23,18 @@
 -->
 	<script src="ps/jquery.min.js"></script>
 	<script>
-
+	var error = '';
 	// UPLOAD - PLEASE WAIT - FUNCTION 
 	$(document).ready(function(){
   		$("#please_wait").hide();
 		$("#submit").click(function(){
 			$("#please_wait").show();
 		});
+		if (error) {
+			alert(error);
+			error='';
+			refreshPage();
+		}
 	});
 
 	// PAGE REFRESH FUNCTION
@@ -115,28 +120,36 @@
 		// AFTER GETIING THE FILE FROM USER
 		if (isset($_FILES['uploadFile'])) {
 			if (!uploadFiles($conn, $configVar_uploadPath)) {
-				echo "<script> alert(\"File upload Unsuccessful!\"); refreshPage();</script>";
+				//echo "<script> alert(\"File upload Unsuccessful!\"); refreshPage();</script>";
+				echo "<script> error = \"File upload Unsuccessful!\";</script>";
 			}
+			/*
 			else {
 				echo "<script> alert(\"File upload Successful!\"); refreshPage();</script>";
 			}
+			*/
 			//echo "<script> refreshPage();</script>";
 		} // END IF - ISSET UPLOADFILE
 
 		// CANCEL JOBS
 		if (isset($_POST['cancelButton'])) {
 			$jobsList = $_POST['cancelJobsList'];
-			cancelJobs($conn, $jobsList);
-			echo "<script> refreshPage();</script>";
+			if (cancelJobs($conn, $jobsList) == 0) {
+				echo "<script> refreshPage();</script>";
+			}
+			else {
+				echo("<script> error = \"You didn't select any jobs to cancel.\" </script>");
+			}
 			//echo "<meta http-equiv='refresh' content='0'>";
 			//header("location: home.php");
-			echo "<script> refreshPage();</script>";		
+			//echo "<script> refreshPage();</script>";		
 		} // END IF - ISSET CANCELBUTTON
 
 		// PRINT JOB
 		elseif (isset($_POST['printButton'])) {
 			$username = $_SESSION["username"];
 			$job_id = $_POST['printButton'];
+			#$job_id = $_POST['JobId'];
 			//echo "Job id = $job_id <br>";
 			//$pages = mysqli_query($conn, "SELECT Pages FROM queue WHERE Job_ID=$job_id")->fetch_assoc()['value'];
 			$result = mysqli_query($conn, "SELECT * FROM queue WHERE `Job_ID`=$job_id");
@@ -178,19 +191,22 @@
 
 				// CHECKING QUOTA
 				if ($pages > $quota) {
-					echo "<script> alert(\"Sorry, not enough quota!\");</script>";
+					//echo "<script> alert(\"Sorry, not enough quota!\");</script>";
+					echo "<script> error = \"Sorry, not enough quota!\";</script>";
 				}
 				else {
 	
 					// PRINTING THE JOB
 					$printing = mysqli_query($conn, "SELECT value FROM utility WHERE name = 'printing'")->fetch_assoc()['value'];
 					if ($printing != 'TRUE') {
-						echo "<script> alert(\"Printer currently unavailable, please try again later!\");</script>";
+						//echo "<script> alert(\"Printer currently unavailable, please try again later!\");</script>";
+						echo "<script> error = \"Printer currently unavailable, please try again later!\";</script>";
 					}
 					else {
 						//exec("lp -o page-ranges=$RANGE_STRING $file_pat", $output);
 						$nop = $quota - $pages; ?>
 						<script>
+					///*
 						if (confirm("<?php echo "Document '$filename'\\nRange = $string\\nTotal Pages = $pages\\nAfter printing quota will be '$nop'"; ?>")) {
 							//alert("This shouldn't appear!");
 							printJob(<?php echo "\"$file_path\",\"$RANGE_STRING\",\"$username\",\"$job_id\",\"$nop\""; ?>); 
@@ -200,6 +216,8 @@
 							refreshPage();
 	
 						} // END IF - confirm() print
+					//*/
+						//printJob(<?php echo "\"$file_path\",\"$RANGE_STRING\",\"$username\",\"$job_id\",\"$nop\""; ?>); 
 						//refreshPage();
 						</script>
 						<?php
@@ -210,7 +228,8 @@
 
 			}
 			else {
-				echo "<script> alert(\"Invalid page range!\");</script>";
+				//echo "<script> alert(\"Invalid page range!\");</script>";
+				echo "<script> error = \"Invalid page range!\";</script>";
 			} // END IF - pageRange()
 			//echo "<script> alert(\"Done!\");</script>";
 			//echo "<script> refreshPage();</script>";
@@ -305,7 +324,9 @@ function uploadFiles($conn, $configVar_uploadPath) {
 
 	}
 	else {
-		?> <script> alert("<?php print_r($errors[0]); ?>"); </script> <?php
+		?> <script> //alert("<?php print_r($errors[0]); ?>"); 
+				error = "<?php print_r($errors[0]); ?>"; 
+		</script> <?php
 	}
 	
 	//echo "<meta http-equiv='refresh' content='0'>";
@@ -432,7 +453,7 @@ function uploadFiles($conn, $configVar_uploadPath) {
 	<?php endif ?>
 		<th> Date and Time of Upload </th>
 	<?php if (isset($var_printOption) && $var_printOption == 'TRUE') : ?>
-		<th> Click the Job ID to Print </th>
+		<th> </th>
 	<?php endif ?>
 		</tr>
 		</thead>
@@ -448,7 +469,7 @@ function uploadFiles($conn, $configVar_uploadPath) {
 	while($row_uploads = mysqli_fetch_assoc($result_uploads_desc)) : ?>
 		<tr>
 		<td><input type="checkbox" name="cancelJobsList[]" value="<?php echo $row_uploads['Job_ID']; ?>" /></td>
-		<td><?php echo $row_uploads['Job_ID']; ?></td>
+		<td> <?php echo $row_uploads['Job_ID']; ?> </td>
 		<td><?php echo $row_uploads['File_Name']; ?></td>
 	<?php if (isset($var_printOption) && $var_printOption == 'TRUE') : 
 		$jobid = $row_uploads['Job_ID'];
@@ -459,8 +480,13 @@ function uploadFiles($conn, $configVar_uploadPath) {
 	<?php endif ?>
 		<td><?php echo $row_uploads['Uploaded_Time'] ?></td>
 	<?php if (isset($var_printOption) && $var_printOption == 'TRUE') : ?>
-		<td><input type="submit" name="printButton" onclick=checkPageRange(<?php echo "$jobid,$pages";?>) value="<?php echo $row_uploads['Job_ID']; ?>" id="print-button" style=""/></td>
+				
+		<td> <input type="submit" name="printButton" onclick=checkPageRange(<?php echo "$jobid,$pages";?>) value="<?php echo $row_uploads['Job_ID']; ?>" id="<?php echo $row_uploads['Job_ID']; ?>" style="display:none;"/>
+		<input type="button" id="print-button" value="Print" onclick="document.getElementById('<?php echo $row_uploads['Job_ID']; ?>').click()"> 
+
+		</td>
 	<?php endif ?>
+			
 		</tr>
 	<?php endwhile ?>	
 		</tbody>
@@ -608,7 +634,9 @@ function ipCheck ($IP, $net, $mask) {
 
 function cancelJobs($conn, $jobsList) {
 	if(empty($jobsList)) {
-		echo("<script> alert(\"You didn't select any jobs to cancel.\"); </script>");
+		//echo("<script> alert(\"You didn't select any jobs to cancel.\"); </script>");
+		//echo("<script> error = \"You didn't select any jobs to cancel.\" </script>");
+		return -1;
 	} 
 	else {
 		$N = count($jobsList);
@@ -622,6 +650,7 @@ function cancelJobs($conn, $jobsList) {
 			// RESULT IS '1' ON SUCCESSFUL EXECUTION OF QUERY
 			//echo "Result = ".$result."<br>";
 		}
+		return 0;
 	}
 }
 

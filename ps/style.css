@@ -25,6 +25,34 @@
   cursor: pointer;
 }
 
+
+/********* PRINT BUTTON STYLE *************/
+
+.print-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.print-btn {
+  color: white;
+  background-color: tomato;
+  padding: 20px 20px;
+  border-radius: 0px;
+  font-size: 25px;
+  font-weight: bold;
+  border:none !important;
+}
+
+.print-btn-wrapper input[type=submit] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
 /************* NAV-BAR SELECT STYLE ***********/
 
 ul#menu li.ps-selected a, ul#menu li.ps-selected a:hover

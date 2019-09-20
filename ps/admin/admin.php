@@ -313,7 +313,11 @@
 		$pages = $row_uploads['Pages']; ?>
 		<td><input name=pagesRange<?php echo "$jobid"; ?> type="text" size="1" value=<?php if ($pages == 1) { echo $pages; } else { echo "1-$pages";} ?> onkeyup=checkPageRange(<?php echo "$jobid,$pages";?>)></td>
 		<td><?php echo $row_uploads['Uploaded_Time'] ?></td>
+		<td> <input type="submit" name="printButton" onclick=checkPageRange(<?php echo "$jobid,$pages";?>) value="<?php echo $row_uploads['Job_ID']; ?>" id="<?php echo $row_uploads['Job_ID']; ?>" style="display:none;"/>
+		<input type="button" id="print-button" value="Print" onclick="document.getElementById('<?php echo $row_uploads['Job_ID']; ?>').click()"> 
+	<!--
 		<td><input type="submit" name="printButton" onclick=checkPageRange(<?php echo "$jobid,$pages";?>) value="<?php echo $row_uploads['Job_ID']; ?>" id="print-button" style=""/></td>
+	-->		
 		</tr>
 	<?php endwhile ?>	
 		</tbody>

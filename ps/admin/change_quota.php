@@ -250,6 +250,7 @@
 			<input type="submit" value="Submit" name="quotaUpdate">	
 			</form>
 		</div>
+	<!--
 		<div class="column"> 
 			<span style="font-size:25px; color:maroon;"> Regular Expression: </span> <br><br><br>	
 			<form action="" method="post">	
@@ -307,6 +308,7 @@
 			<input type="submit" value="Submit" name="regExpUpdate">	
 			</form>
 		</div>
+	-->
 	</div>
 
 </div><!-- content ends here -->

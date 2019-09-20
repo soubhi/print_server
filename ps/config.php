@@ -25,7 +25,7 @@
 	$password_path = "cat /home/printmaster/ypcat_passwd_20181201.txt";
 	$configVar_uploadPath = "/home/printmaster/uploads/"; 
 	//$configVar_uploadPath = "/var/printmaster/uploads/";
-	$configVar_net = "192.168.0.0";
+	$configVar_net = "192.168.43.0";
 	$configVar_mask = "24";
 	//$configVar_net = "10.5.0.0";
 	//$configVar_mask = "23";
